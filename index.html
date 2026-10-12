@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BEE">
 <link rel="apple-touch-icon" href="icone-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
-<title>Burkina English Express — Lesson Plan Generator 13.42</title>
+<title>Burkina English Express — Lesson Plan Generator 13.43</title>
 <style>
 :root{
   --ink:#233746;
@@ -406,7 +406,7 @@ table.grid td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:n
 
 <!-- ============ RÉGLAGES ============ -->
 <aside class="panel" id="panel">
-  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.42</small></span></div>
+  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.43</small></span></div>
 
   <fieldset>
     <details class="rep" id="repTeacher"><summary>Teacher and school <span class="resume" id="resTeacher"></span></summary>
@@ -23664,6 +23664,41 @@ function repereDe(phrase, texte, lineNums) {
   return p ? ' (\u00a7' + p + ')' : '';
 }
 
+/* Où chercher — repère donné à l'ÉLÈVE dans les exercices de vocabulaire
+   (synonymes, contraires, définitions, familles, expressions), pour qu'il
+   ne relise pas tout le texte. On donne le paragraphe ; si le paragraphe
+   est long (plus de six lignes) et que les lignes sont numérotées, une
+   portion de cinq lignes (« lines 8–12 »), placée pour que la réponse n'y
+   soit pas toujours au milieu. Le corrigé, lui, garde la ligne exacte.
+   Sans numérotation, un paragraphe long est situé par son début, son
+   milieu ou sa fin ; un texte d'un seul paragraphe court n'a pas besoin
+   de repère. */
+const LIGNES_PARAGRAPHE_LONG = 6;
+function ouChercher(phrase, texte, lineNums) {
+  if (!phrase) return '';
+  const paras = String(texte || '').split(/\n{2,}/).filter(x => x.trim());
+  const p = paragrapheDe(phrase, texte);
+  if (!p) return '';
+  const lignes = lignesNumerotees(texte);
+  /* lignes du paragraphe p (les paragraphes sont séparés par null) */
+  let k = 1; const duPara = [];
+  for (const l of lignes) { if (l === null) { k++; continue; } if (k === p) duPara.push(l.n); }
+  const a = duPara[0], b = duPara[duPara.length - 1], nb = duPara.length;
+  const plusieurs = paras.length > 1;
+  const nomPara = plusieurs ? 'paragraph ' + p : 'the text';
+  if (nb <= LIGNES_PARAGRAPHE_LONG) return plusieurs ? ' (paragraph ' + p + ')' : '';
+  const l = ligneDe(phrase, texte);
+  if (!l) return plusieurs ? ' (paragraph ' + p + ')' : '';
+  if (lineNums) {
+    let h = 0; for (const c of String(phrase)) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+    const debut = Math.max(a, Math.min(b - 4, l - (h % 5)));
+    return ' (lines ' + debut + '\u2013' + Math.min(b, debut + 4) + ')';
+  }
+  const rang = (l - a) / Math.max(1, nb - 1);
+  const ou = rang < 1 / 3 ? 'beginning' : rang < 2 / 3 ? 'middle' : 'end';
+  return ' (' + ou + ' of ' + nomPara + ')';
+}
+
 /* Famille de forme d'un mot : sert à choisir des distracteurs et des
    intrus qui ne se repèrent pas à l'œil nu. */
 function formeDe(w) {
@@ -25061,8 +25096,8 @@ function exWordFamily(ctx) {
   const items = [], key = [];
   choisis.forEach((c, i) => {
     items.push('Give the <b>' + CAT_NOM[c.cat] + '</b> formed from “' + esc(c.mot) + '”'
-      + repereDe(c.s, ctx.text, ctx.lineNums) + '.');
-    key.push(c.rep);
+      + ouChercher(c.s, ctx.text, ctx.lineNums) + '.');
+    key.push(c.rep + repereDe(c.s, ctx.text, ctx.lineNums));
   });
   return {
     instruction: 'Find in the text the word given, then write the word of the same family that is asked for.',
@@ -25108,7 +25143,7 @@ function construireCouples(ctx, table, libelle, consigne) {
   const items = [], key = [];
   choisis.forEach(c => {
     items.push(libelle + ' “<b>' + esc(c.amorce) + '</b>”'
-      + (ctx.lineNums ? repereDe(c.s, ctx.text, true) : '') + '.');
+      + ouChercher(c.s, ctx.text, ctx.lineNums) + '.');
     key.push(c.mot + repereDe(c.s, ctx.text, ctx.lineNums));
   });
   return { instruction: consigne, body: ol(items), key: keyLine(key) };
@@ -26090,7 +26125,7 @@ function exFindWord(ctx) {
   const choisis = spreadPick(cand, ctx.n);
   const items = [], key = [];
   choisis.forEach(c => {
-    items.push(esc(c.def) + '.');
+    items.push(esc(c.def) + ouChercher(c.s, ctx.text, ctx.lineNums) + '.');
     key.push(c.mot + repereDe(c.s, ctx.text, ctx.lineNums));
   });
   return {
@@ -26160,7 +26195,9 @@ function exCollocation(ctx) {
     && !reponses.some(r => r.startsWith(w) || w.startsWith(r)));
   const intrus = shuffledBy(autres, ctx.rnd).slice(0, 2);
   const banque = shuffledBy([...new Set([...reponses, ...intrus])], ctx.rnd);
-  const items = choisies.map(p => esc(p.slice(0, p.indexOf(' '))) + ' ' + BLANK);
+  const phrases = sentencesOf(ctx.text);
+  const phraseDe = p => phrases.find(x => x.toLowerCase().indexOf(p) >= 0) || '';
+  const items = choisies.map(p => esc(p.slice(0, p.indexOf(' '))) + ' ' + BLANK + ouChercher(phraseDe(p), ctx.text, ctx.lineNums));
   const key = choisies.map(p => p.slice(p.indexOf(' ') + 1));
   return {
     instruction: 'Complete each expression from the text with a word from the box. Two words will not be used.',
