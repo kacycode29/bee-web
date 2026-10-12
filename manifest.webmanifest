@@ -1,8 +1,8 @@
 {
   "name": "BEE — Burkina English Express",
   "short_name": "BEE",
-  "description": "Lesson Plan Generator — fiches de leçon conformes aux curricula et à la planification du Burkina Faso.",
-  "lang": "fr",
+  "description": "Lesson Plan Generator — lesson plans in line with the curricula and the official planning of Burkina Faso.",
+  "lang": "en",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
