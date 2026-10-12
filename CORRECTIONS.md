@@ -32,5 +32,10 @@ Android simulé : pas d'astuce, écran d'activation normal.
 ## À tester sur un iPhone déjà installé
 
 1. Ouvrir BEE depuis son icône, avec la connexion ; le fermer puis le rouvrir une fois.
-2. En haut de la page, la version doit être **13.41**, et la licence doit rester active.
+2. En haut de la page, la version doit être **13.42**, et la licence doit rester active.
 3. Couper la connexion et rouvrir BEE : il doit s'ouvrir quand même.
+
+## 13.42
+
+La liste des activités à cocher est de nouveau dépliée par défaut, sous un titre visible (elle était repliée derrière
+une ligne grise peu visible). Détail : section 28 du rapport de `bee-fiches`. Cache hors connexion `bee-13.42`.

@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BEE">
 <link rel="apple-touch-icon" href="icone-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
-<title>Burkina English Express — Lesson Plan Generator 13.41</title>
+<title>Burkina English Express — Lesson Plan Generator 13.42</title>
 <style>
 :root{
   --ink:#233746;
@@ -54,6 +54,8 @@ details.rep>summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;a
 details.rep>summary::-webkit-details-marker{display:none}
 details.rep>summary::before{content:"▸";display:inline-block;width:12px;color:var(--green-dark)}
 details.rep[open]>summary::before{content:"▾"}
+/* Le choix des activités sert à chaque fiche : déplié par défaut, et son titre se voit. */
+details.rep.sub>summary{display:block;font-size:13px;color:var(--green-dark);padding-top:6px}
 details.rep>summary .resume{font-weight:400;color:var(--ink-soft);opacity:.85;font-size:11.5px;letter-spacing:0}
 details.rep[open]>summary{border-bottom:1px solid var(--rule);margin-bottom:8px}
 .f{margin-bottom:10px}
@@ -404,7 +406,7 @@ table.grid td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:n
 
 <!-- ============ RÉGLAGES ============ -->
 <aside class="panel" id="panel">
-  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.41</small></span></div>
+  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.42</small></span></div>
 
   <fieldset>
     <details class="rep" id="repTeacher"><summary>Teacher and school <span class="resume" id="resTeacher"></span></summary>
@@ -21602,7 +21604,7 @@ function refreshDynamicEditor(force=false) {
       <button class="btn slim" type="button" id="btnResetSituation">Back to BEE proposals</button>
     </div>
     <p class="small-note">You may keep a proposal, edit it or write your own. What you write is kept for this class, lesson and session, and comes back the next time you prepare it. The situation is deliberately concise. Its language, length and complexity adapt to the learners’ level. It does not repeat the lesson or unit title because these are already identified in the lesson plan.</p>
-    <details class="rep sub" id="repActivites" ${box.dataset.actOpen === '1' ? 'open' : ''}><summary>Choose the activities <span class="resume" id="resActivites"></span></summary>
+    <details class="rep sub" id="repActivites" ${box.dataset.actOpen === '0' ? '' : 'open'}><summary>Activities of the lesson plan — tick those you want <span class="resume" id="resActivites"></span></summary>
     <h4>Controlled practice — select some activities</h4>
     <div class="choice-grid">${controlled.map(x=>`<label class="choice"><input type="checkbox" data-activity="controlled" value="${esc(x)}" ${selectedC.includes(x)?'checked':''}> <span>${esc(x)}</span></label>`).join('')}</div>
     <h4>Semi-controlled practice — select some activities</h4>
