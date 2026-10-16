@@ -32,7 +32,7 @@ Android simulé : pas d'astuce, écran d'activation normal.
 ## À tester sur un iPhone déjà installé
 
 1. Ouvrir BEE depuis son icône, avec la connexion ; le fermer puis le rouvrir une fois.
-2. En haut de la page, la version doit être **13.43**, et la licence doit rester active.
+2. En haut de la page, la version doit être **13.44**, et la licence doit rester active.
 3. Couper la connexion et rouvrir BEE : il doit s'ouvrir quand même.
 
 ## 13.42
@@ -44,3 +44,10 @@ une ligne grise peu visible). Détail : section 28 du rapport de `bee-fiches`. C
 
 Exercices de vocabulaire : chaque item indique à l'élève le paragraphe, ou une portion de cinq lignes pour un paragraphe
 long, où chercher la réponse. Détail : section 29 du rapport de `bee-fiches`. Cache hors connexion `bee-13.43`.
+
+## 13.44
+
+Retours d'inspection sur la 13.43 : coupe « Arn……ud » et mises en gras corrigées, comparatifs complets, règle des
+connecteurs composée d'après le texte, *wishes and regrets* et *be / get used to* corrigés, intitulés tronqués rétablis,
+6e U6 L1 au présent simple, fonctions et objectifs par séance nettoyés (6e à 3e). Détail : section 31 du rapport de
+`bee-fiches`. Cache hors connexion `bee-13.44`. La page est la même que celle de l'APK, plus les ajouts propres au web.

@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="BEE">
 <link rel="apple-touch-icon" href="icone-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
-<title>Burkina English Express — Lesson Plan Generator 13.43</title>
+<title>Burkina English Express — Lesson Plan Generator 13.44</title>
 <style>
 :root{
   --ink:#233746;
@@ -406,7 +406,7 @@ table.grid td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:n
 
 <!-- ============ RÉGLAGES ============ -->
 <aside class="panel" id="panel">
-  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.43</small></span></div>
+  <div class="brand"><b>📘 BEE</b><span>Burkina English Express · Lesson Plan Generator<br><small style="opacity:.7">version 13.44</small></span></div>
 
   <fieldset>
     <details class="rep" id="repTeacher"><summary>Teacher and school <span class="resume" id="resTeacher"></span></summary>
@@ -1492,7 +1492,7 @@ const CURRICULUM = {
        "Locating places",
        "Giving directions",
        "Asking for directions",
-       "Using imperatives places",
+       "Using imperatives (go straight, turn left…)",
        "Writing about places and their locations"
       ]
      },
@@ -1757,7 +1757,7 @@ const CURRICULUM = {
        "Avoiding accidents",
        "Describing attitudes to avoid accidents",
        "Advising",
-       "Using imperatives Do slow down near schools"
+       "Using imperatives (do / don’t)"
       ]
      },
      {
@@ -1800,7 +1800,7 @@ const CURRICULUM = {
       "sessions": [
        "Construction jobs",
        "Workers on site",
-       "Using formation of nouns derived"
+       "Using formation of nouns derived from verbs"
       ]
      },
      {
@@ -1848,8 +1848,7 @@ const CURRICULUM = {
      {
       "name": "The market",
       "functions": [
-       "Talking about activities on a typical",
-       "African market"
+       "Talking about activities on a typical African market"
       ],
       "sessions": [
        "African market",
@@ -1990,18 +1989,18 @@ const CURRICULUM = {
      {
       "name": "Characteristics of teenagers",
       "functions": [
-       "Talking about teenagers, their rights, and civic responsilities"
+       "Talking about teenagers, their rights, and civic responsibilities"
       ],
       "sessions": [
        "Teenagers' characteristics",
        "Teenagers' rights",
-       "Using determiners Own (e.g"
+       "Using determiners (own, each)"
       ]
      },
      {
       "name": "Child’s rights and civic responsibilities",
       "functions": [
-       "Talking about teenagers, their rights, and civic responsilities"
+       "Talking about teenagers, their rights, and civic responsibilities"
       ],
       "sessions": [
        "Child rights",
@@ -2017,7 +2016,8 @@ const CURRICULUM = {
      {
       "name": "Climate change: causes and effects",
       "functions": [
-       "Talking about causes and effects of climate change Sensitising on environmental issues"
+       "Talking about causes and effects of climate change",
+       "Sensitising on environmental issues"
       ],
       "sessions": [
        "Causes of climate change",
@@ -2028,7 +2028,8 @@ const CURRICULUM = {
      {
       "name": "Eco-citizenship",
       "functions": [
-       "Talking about causes and effects of climate change Sensitising on environmental issues"
+       "Talking about causes and effects of climate change",
+       "Sensitising on environmental issues"
       ],
       "sessions": [
        "Eco-citizen",
@@ -2272,17 +2273,19 @@ const CURRICULUM = {
      {
       "name": "School majors and careers (educational counselling)",
       "functions": [
-       "Talking about training and job opportunities Sensitising"
+       "Talking about training and job opportunities",
+       "Sensitising"
       ],
       "sessions": [
-       "Talking about training and job opportunities Sensitising",
+       "Talking about training and job opportunities",
        "Listening to a talk on school majors and careers"
       ]
      },
      {
       "name": "Self-employment initiatives",
       "functions": [
-       "Talking about training and job opportunities Sensitising"
+       "Talking about training and job opportunities",
+       "Sensitising"
       ],
       "sessions": [
        "Self-employment benefits"
@@ -2297,21 +2300,23 @@ const CURRICULUM = {
      {
       "name": "Cultural tolerance",
       "functions": [
-       "Sensitising Giving opinions"
+       "Sensitising",
+       "Giving opinions"
       ],
       "sessions": [
        "Cultural diversity",
        "Tolerance and cohesion",
-       "Sensitising Giving opinions"
+       "Sensitising and giving opinions"
       ]
      },
      {
       "name": "Religious tolerance",
       "functions": [
-       "Sensitising Giving opinions"
+       "Sensitising",
+       "Giving opinions"
       ],
       "sessions": [
-       "Sensitising Giving opinions",
+       "Sensitising and giving opinions",
        "Using pronouns"
       ]
      }
@@ -4865,7 +4870,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Greetings|Using personal pronouns": {
    "skill": "Writing",
    "grammar": "Personal pronouns",
-   "base": "Identify some English-speaking countries",
+   "base": "introduce another person",
    "fonctions": [
     "Introducing another person"
    ]
@@ -4880,10 +4885,11 @@ const SEANCES_OFFICIELLES = {
   },
   "U1|Classroom language|Asking for permission": {
    "skill": "Speaking",
-   "grammar": "Imperatives",
+   "grammar": "May I …? Can you …?",
    "base": "ask for permission",
    "fonctions": [
-    "Giving instructions"
+    "Seeking permission",
+    "Giving permission"
    ]
   },
   "U1|Classroom language|Asking for information": {
@@ -4891,23 +4897,23 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Yes / no questions",
    "base": "ask for information",
    "fonctions": [
-    "Seeking permission"
+    "Asking for information"
    ]
   },
   "U1|Classroom language|Giving orders": {
    "skill": "Speaking",
-   "grammar": "Yes / no questions",
+   "grammar": "Imperatives",
    "base": "give orders",
    "fonctions": [
-    "Giving permission"
+    "Giving orders"
    ]
   },
   "U1|Classroom language|Giving instructions": {
    "skill": "Writing",
-   "grammar": "May I …? Can you …?",
-   "base": "give instructions to one another",
+   "grammar": "Imperatives",
+   "base": "give instructions to one another; ask for repetition",
    "fonctions": [
-    "Asking for information"
+    "Giving instructions"
    ]
   },
   "U1|Classroom objects and cardinal numbers|Identifying classroom objects": {
@@ -4929,7 +4935,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Classroom objects and cardinal numbers|Counting objects": {
    "skill": "Reading Comprehension",
    "grammar": "Wh-questions (what, where, how many, how much,…)",
-   "base": "locate classroom objects",
+   "base": "count from 13 to 19",
    "fonctions": [
     "Counting objects / people"
    ]
@@ -4953,17 +4959,17 @@ const SEANCES_OFFICIELLES = {
   "U2|Time and days of the week|Daily timetable": {
    "skill": "Speaking",
    "grammar": "Simple Present (ordinary verbs)",
-   "base": "count from 20 to 100",
+   "base": "ask questions about their daily timetables; answer questions about their daily timetables",
    "fonctions": [
-    "Asking and telling the time"
+    "Telling about a day’s timetable"
    ]
   },
   "U2|Time and days of the week|Weekly programme": {
    "skill": "Reading Comprehension",
    "grammar": "Simple Present (ordinary verbs)",
-   "base": "tell the time from an analogue watch as well as a digital watch",
+   "base": "name the days of the week",
    "fonctions": [
-    "Telling about a day’s timetable"
+    "Telling about a week’s programme"
    ]
   },
   "U2|Time and days of the week|Counting from 20": {
@@ -4971,7 +4977,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Simple Present (ordinary verbs)",
    "base": "count from 20 to 100",
    "fonctions": [
-    "Telling about a day’s timetable"
+    "Asking and telling the time"
    ]
   },
   "U2|Time and days of the week|Asking the time": {
@@ -4979,7 +4985,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Simple Present (ordinary verbs)",
    "base": "ask the time",
    "fonctions": [
-    "Telling about a week’s programme"
+    "Asking and telling the time"
    ]
   },
   "U2|The date|Writing the date": {
@@ -5041,7 +5047,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Holidays and Sports|Holiday activities": {
    "skill": "Reading Comprehension",
    "grammar": "Review simple present",
-   "base": "describe sport actions",
+   "base": "give the dates of their school events and holidays",
    "fonctions": [
     "Describing sport actions/ events"
    ]
@@ -5171,7 +5177,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Qualifying adjectives",
    "base": "describe people’s moods and physical appearances",
    "fonctions": [
-    "Describing people’s moods"
+    "Describing people’s physical appearances"
    ]
   },
   "U4|Describing people|Moods and feelings": {
@@ -5233,7 +5239,7 @@ const SEANCES_OFFICIELLES = {
   "U4|Comparing people and things|Comparing people and things": {
    "skill": "Writing",
    "grammar": "Comparatives of superiority, inferiority and equality",
-   "base": "compare people and things using the comparison of superiority",
+   "base": "compare people and things using the comparison of superiority, inferiority and equality",
    "fonctions": [
     "Comparing people and things"
    ]
@@ -5331,7 +5337,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Review Can and Must",
    "base": "choose appropriate actions to preserve public and private properties",
    "fonctions": [
-    "Talking about attitudes towards public and private properties"
+    "Talking about correct attitudes towards regulations"
    ]
   },
   "U5|Attitudes towards public and private properties|Choosing appropriate actions": {
@@ -5339,7 +5345,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Review Can and Must",
    "base": "choose appropriate actions to preserve public and private properties",
    "fonctions": [
-    "Talking about correct attitudes towards regulations"
+    "Talking about attitudes towards public and private properties"
    ]
   },
   "U5|Attitudes towards public and private properties|Talking about attitudes": {
@@ -5352,7 +5358,7 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|Meals, dishes and cutlery|Breakfast": {
    "skill": "Listening Comprehension",
-   "grammar": "Review Can and Must",
+   "grammar": "Review simple present (ordinary verbs)",
    "base": "name the different meals and dishes",
    "fonctions": [
     "Talking about meals and dishes"
@@ -5360,7 +5366,7 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|Meals, dishes and cutlery|Lunch": {
    "skill": "Speaking",
-   "grammar": "Review Can and Must",
+   "grammar": "Review simple present (ordinary verbs)",
    "base": "name the different meals and dishes",
    "fonctions": [
     "Talking about meals and dishes"
@@ -5368,15 +5374,15 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|Meals, dishes and cutlery|Dinner": {
    "skill": "Reading Comprehension",
-   "grammar": "Review Can and Must",
-   "base": "name the different cutlery items",
+   "grammar": "Review simple present (ordinary verbs)",
+   "base": "choose their preferred meals",
    "fonctions": [
-    "Talking about cutlery"
+    "Talking about meals and dishes"
    ]
   },
   "U6|Meals, dishes and cutlery|Cutlery items": {
    "skill": "Writing",
-   "grammar": "Review Can and Must",
+   "grammar": "Review simple present (ordinary verbs)",
    "base": "name the different cutlery items",
    "fonctions": [
     "Talking about cutlery"
@@ -5417,7 +5423,7 @@ const SEANCES_OFFICIELLES = {
   "U6|At the restaurant|Asking for the bill": {
    "skill": "Speaking",
    "grammar": "Review of yes / no questions and wh-questions",
-   "base": "order meals and drinks on the menu",
+   "base": "ask for the bill",
    "fonctions": [
     "Ordering meals at the restaurant"
    ]
@@ -5443,7 +5449,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Simple future",
    "base": "name means of transportation",
    "fonctions": [
-    "Talking about travel documents"
+    "Asking for and giving information"
    ]
   },
   "U7|Travelling|Asking for and giving information": {
@@ -5486,7 +5492,7 @@ const SEANCES_OFFICIELLES = {
     "Asking for and giving directions"
    ]
   },
-  "U7|Places and their locations.|Using imperatives places": {
+  "U7|Places and their locations.|Using imperatives (go straight, turn left…)": {
    "skill": "Speaking",
    "grammar": "Imperatives (go straight, turn left …)",
    "base": "ask for directions",
@@ -5513,17 +5519,17 @@ const SEANCES_OFFICIELLES = {
   "U7|Entertainment in town.|Inviting": {
    "skill": "Speaking",
    "grammar": "Future (going to + infinitive)",
-   "base": "Name a few types of entertainment",
+   "base": "invite somebody to a given entertainment",
    "fonctions": [
-    "Talking about types of entertainments"
+    "Inviting somebody to an entertainment"
    ]
   },
   "U7|Entertainment in town.|Accepting": {
    "skill": "Reading Comprehension",
    "grammar": "Can I invite you to …",
-   "base": "invite somebody to a given entertainment",
+   "base": "accept / decline invitations",
    "fonctions": [
-    "Inviting somebody to an entertainment"
+    "Accepting / Declining invitations"
    ]
   },
   "U7|Entertainment in town.|Declining": {
@@ -5553,7 +5559,7 @@ const SEANCES_OFFICIELLES = {
   "U8|Vegetables|Vegetable names": {
    "skill": "Listening Comprehension",
    "grammar": "Review sequence adverbs (first, then, next, after all, finally)",
-   "base": "describe the process of growing a given vegetable",
+   "base": "name some vegetables; describe some vegetables",
    "fonctions": [
     "Talking about vegetables"
    ]
@@ -5561,7 +5567,7 @@ const SEANCES_OFFICIELLES = {
   "U8|Vegetables|Growing vegetables": {
    "skill": "Speaking",
    "grammar": "Review sequence adverbs (first, then, next, after all, finally)",
-   "base": "name some vegetables",
+   "base": "describe the process of growing a given vegetable",
    "fonctions": [
     "Describing the process of growing vegetables"
    ]
@@ -5578,7 +5584,7 @@ const SEANCES_OFFICIELLES = {
  "5e": {
   "U1|Child’s rights at home and at school|Child's rights at home": {
    "skill": "Listening Comprehension",
-   "grammar": "Equivalents of defective auxiliaries",
+   "grammar": "Equivalents of defective auxiliaries (modals and their equivalents: be allowed to, be able to, have to)",
    "base": "enumerate some child’s rights at home and at school",
    "fonctions": [
     "Sensitising"
@@ -5586,8 +5592,8 @@ const SEANCES_OFFICIELLES = {
   },
   "U1|Child’s rights at home and at school|Child's rights at school": {
    "skill": "Reading Comprehension",
-   "grammar": "Equivalents of defective auxiliaries",
-   "base": "define child’s rights",
+   "grammar": "Equivalents of defective auxiliaries (modals and their equivalents: be allowed to, be able to, have to)",
+   "base": "enumerate some child’s rights at home and at school",
    "fonctions": [
     "Sensitising"
    ]
@@ -5610,7 +5616,7 @@ const SEANCES_OFFICIELLES = {
   },
   "U1|Child’s rights at home and at school|Using equivalents of defective auxiliaries": {
    "skill": "Writing",
-   "grammar": "Equivalents of defective auxiliaries",
+   "grammar": "Equivalents of defective auxiliaries (modals and their equivalents: be allowed to, be able to, have to)",
    "base": "enumerate some child’s rights at home and at school",
    "fonctions": [
     "Sensitising"
@@ -5659,7 +5665,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Children and the law|Laws protecting children": {
    "skill": "Listening Comprehension",
    "grammar": "Question tags",
-   "base": "identify some laws about",
+   "base": "enumerate some laws which protect children",
    "fonctions": [
     "Talking about laws which protect children"
    ]
@@ -5667,7 +5673,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Children and the law|Children's education and the law": {
    "skill": "Reading Comprehension",
    "grammar": "Question tags",
-   "base": "enumerate some laws which protect children",
+   "base": "identify some laws about children’s education",
    "fonctions": [
     "Talking about laws which protect children"
    ]
@@ -5683,7 +5689,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Children and the law|Talking about laws which protect children": {
    "skill": "Speaking",
    "grammar": "Question tags",
-   "base": "identify some laws about",
+   "base": "enumerate some laws which protect children",
    "fonctions": [
     "Talking about laws which protect children"
    ]
@@ -5731,7 +5737,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Pollution|Sources of pollution": {
    "skill": "Listening Comprehension",
    "grammar": "Simple future",
-   "base": "identify the main sources of pollution list appropriate environmental attitudes",
+   "base": "identify the main sources of pollution; list appropriate environmental attitudes",
    "fonctions": [
     "Talking about sources of pollution and environmental attitudes"
    ]
@@ -5739,7 +5745,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Pollution|Environmental attitudes": {
    "skill": "Speaking",
    "grammar": "Simple future",
-   "base": "identify the main sources of pollution list appropriate environmental attitudes",
+   "base": "identify the main sources of pollution; list appropriate environmental attitudes",
    "fonctions": [
     "Talking about sources of pollution and environmental attitudes"
    ]
@@ -5747,15 +5753,15 @@ const SEANCES_OFFICIELLES = {
   "U2|Pollution|Recommendations": {
    "skill": "Reading Comprehension",
    "grammar": "Simple future",
-   "base": "identify the main sources of pollution list appropriate environmental attitudes",
+   "base": "recommend appropriate environmental attitudes",
    "fonctions": [
-    "Talking about sources of pollution and environmental attitudes"
+    "Making recommendations"
    ]
   },
   "U2|Pollution|Using simple future": {
    "skill": "Speaking",
    "grammar": "Simple future",
-   "base": "recommend appropriate",
+   "base": "recommend appropriate environmental attitudes",
    "fonctions": [
     "Making recommendations"
    ]
@@ -5763,7 +5769,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Pollution|Writing about pollution": {
    "skill": "Writing",
    "grammar": "Simple future",
-   "base": "recommend appropriate",
+   "base": "recommend appropriate environmental attitudes",
    "fonctions": [
     "Making recommendations"
    ]
@@ -5787,7 +5793,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Wildlife|Protecting wildlife": {
    "skill": "Reading Comprehension",
    "grammar": "If clause (second conditional)",
-   "base": "identify some wild plants",
+   "base": "give some reasons for protecting wild life",
    "fonctions": [
     "Giving reasons"
    ]
@@ -5827,7 +5833,7 @@ const SEANCES_OFFICIELLES = {
   "U3|Cleanliness|Talking about cleanliness": {
    "skill": "Speaking",
    "grammar": "Need",
-   "base": "write slogans to promote cleanliness",
+   "base": "explain the necessity of cleanliness",
    "fonctions": [
     "Talking about cleanliness"
    ]
@@ -5859,23 +5865,23 @@ const SEANCES_OFFICIELLES = {
   "U3|Sports and health|Popular sports": {
    "skill": "Listening Comprehension",
    "grammar": "Superlatives",
-   "base": "Name some popular sports",
+   "base": "name some popular sports; compare sports",
    "fonctions": [
-    "Explaining the impact of sports on health"
+    "Comparing sports"
    ]
   },
   "U3|Sports and health|Benefits of sports": {
    "skill": "Speaking",
    "grammar": "Superlatives",
-   "base": "Give some advantages of the practice of sports",
+   "base": "give some advantages of the practice of sports; explain the impact of the practice of sports on health",
    "fonctions": [
-    "Comparing sports"
+    "Explaining the impact of sports on health"
    ]
   },
   "U4|Local institutions|Local institutions": {
    "skill": "Listening Comprehension",
    "grammar": "Relative pronouns (which, who, whom, that)",
-   "base": "name the main institutions at the levels of region, province",
+   "base": "name the main institutions at the levels of region, province, department and village",
    "fonctions": [
     "Talking about the roles of institutions"
    ]
@@ -5883,7 +5889,7 @@ const SEANCES_OFFICIELLES = {
   "U4|Local institutions|Roles of local institutions": {
    "skill": "Reading Comprehension",
    "grammar": "Relative pronouns (which, who, whom, that)",
-   "base": "name the main institutions at the levels of region, province",
+   "base": "specify the roles of the main local institutions",
    "fonctions": [
     "Talking about the roles of institutions"
    ]
@@ -5891,7 +5897,7 @@ const SEANCES_OFFICIELLES = {
   "U4|Local institutions|Naming the main institutions at the levels of region": {
    "skill": "Speaking",
    "grammar": "Relative pronouns (which, who, whom, that)",
-   "base": "name the main institutions at the levels of region, province",
+   "base": "name the main institutions at the levels of region, province, department and village",
    "fonctions": [
     "Talking about the roles of institutions"
    ]
@@ -5899,7 +5905,7 @@ const SEANCES_OFFICIELLES = {
   "U4|Local institutions|Talking about the roles of institutions": {
    "skill": "Speaking",
    "grammar": "Relative pronouns (which, who, whom, that)",
-   "base": "name the main institutions at the levels of region, province",
+   "base": "specify the roles of the main local institutions",
    "fonctions": [
     "Talking about the roles of institutions"
    ]
@@ -5907,7 +5913,7 @@ const SEANCES_OFFICIELLES = {
   "U4|Local institutions|Writing about local institutions": {
    "skill": "Writing",
    "grammar": "Relative pronouns (which, who, whom, that)",
-   "base": "name the main institutions at the levels of region, province",
+   "base": "name the main institutions at the levels of region, province, department and village",
    "fonctions": [
     "Talking about the roles of institutions"
    ]
@@ -5955,7 +5961,7 @@ const SEANCES_OFFICIELLES = {
   "U4|National institutions|National institutions": {
    "skill": "Listening Comprehension",
    "grammar": "Review the simple present and the present progressive",
-   "base": "name the main institutions specify the role of each institution",
+   "base": "name the main institutions; specify the role of each institution",
    "fonctions": [
     "Talking about institutions"
    ]
@@ -5963,7 +5969,7 @@ const SEANCES_OFFICIELLES = {
   "U4|National institutions|Roles of national institutions": {
    "skill": "Reading Comprehension",
    "grammar": "Review the simple present and the present progressive",
-   "base": "name the main institutions specify the role of each institution",
+   "base": "specify the role of each institution",
    "fonctions": [
     "Talking about institutions"
    ]
@@ -5971,7 +5977,7 @@ const SEANCES_OFFICIELLES = {
   "U4|National institutions|Naming the main institutions specify the role": {
    "skill": "Writing",
    "grammar": "Review the simple present and the present progressive",
-   "base": "name the main institutions specify the role of each institution",
+   "base": "name the main institutions; specify the role of each institution",
    "fonctions": [
     "Talking about institutions"
    ]
@@ -5979,7 +5985,7 @@ const SEANCES_OFFICIELLES = {
   "U4|National institutions|Talking about institutions": {
    "skill": "Speaking",
    "grammar": "Review the simple present and the present progressive",
-   "base": "name the main institutions specify the role of each institution",
+   "base": "specify the role of each institution",
    "fonctions": [
     "Talking about institutions"
    ]
@@ -5987,7 +5993,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Dangerous attitudes in the traffic|Dangerous attitudes": {
    "skill": "Listening Comprehension",
    "grammar": "Imperatives",
-   "base": "enumerate dangerous attitudes in the traffic distinguish between appropriate and inappropriate attitudes in the traffic",
+   "base": "enumerate dangerous attitudes in the traffic",
    "fonctions": [
     "Talking about dangerous attitudes in the traffic"
    ]
@@ -5995,7 +6001,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Dangerous attitudes in the traffic|Appropriate vs inappropriate attitudes": {
    "skill": "Reading Comprehension",
    "grammar": "Imperatives",
-   "base": "enumerate dangerous attitudes in the traffic distinguish between appropriate and inappropriate attitudes in the traffic",
+   "base": "distinguish between appropriate and inappropriate attitudes in the traffic",
    "fonctions": [
     "Talking about dangerous attitudes in the traffic"
    ]
@@ -6003,7 +6009,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Dangerous attitudes in the traffic|Using imperatives": {
    "skill": "Speaking",
    "grammar": "Imperatives",
-   "base": "enumerate dangerous attitudes in the traffic distinguish between appropriate and inappropriate attitudes in the traffic",
+   "base": "enumerate dangerous attitudes in the traffic",
    "fonctions": [
     "Talking about dangerous attitudes in the traffic"
    ]
@@ -6011,7 +6017,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Dangerous attitudes in the traffic|Talking about dangerous attitudes in the traffic": {
    "skill": "Speaking",
    "grammar": "Imperatives",
-   "base": "enumerate dangerous attitudes in the traffic distinguish between appropriate and inappropriate attitudes in the traffic",
+   "base": "enumerate dangerous attitudes in the traffic",
    "fonctions": [
     "Sensitising about dangerous attitudes in the traffic"
    ]
@@ -6019,14 +6025,14 @@ const SEANCES_OFFICIELLES = {
   "U5|Dangerous attitudes in the traffic|Writing about dangerous attitudes in the traffic": {
    "skill": "Writing",
    "grammar": "Imperatives",
-   "base": "enumerate dangerous attitudes in the traffic distinguish between appropriate and inappropriate attitudes in the traffic",
+   "base": "enumerate dangerous attitudes in the traffic",
    "fonctions": [
     "Sensitising about dangerous attitudes in the traffic"
    ]
   },
   "U5|Risky places in the traffic|Risky places": {
    "skill": "Listening Comprehension",
-   "grammar": "Imperatives (do / don’t) Do slow down near schools! Don’t speed at crossroad!",
+   "grammar": "Imperatives (do / don’t): Do slow down near schools! Don’t speed at crossroads!",
    "base": "identify risky places on roads",
    "fonctions": [
     "Describing attitudes to avoid accidents"
@@ -6034,32 +6040,32 @@ const SEANCES_OFFICIELLES = {
   },
   "U5|Risky places in the traffic|Avoiding accidents": {
    "skill": "Reading Comprehension",
-   "grammar": "Imperatives (do / don’t) Do slow down near schools! Don’t speed at crossroad!",
-   "base": "describe appropriate attitudes to avoid accidents at risky places to advise peers about appropriate attitudes to avoid",
+   "grammar": "Imperatives (do / don’t): Do slow down near schools! Don’t speed at crossroads!",
+   "base": "describe appropriate attitudes to avoid accidents at risky places",
    "fonctions": [
     "Describing attitudes to avoid accidents"
    ]
   },
   "U5|Risky places in the traffic|Describing attitudes to avoid accidents": {
    "skill": "Speaking",
-   "grammar": "Imperatives (do / don’t) Do slow down near schools! Don’t speed at crossroad!",
-   "base": "identify risky places on roads",
+   "grammar": "Imperatives (do / don’t): Do slow down near schools! Don’t speed at crossroads!",
+   "base": "describe appropriate attitudes to avoid accidents at risky places",
    "fonctions": [
     "Describing attitudes to avoid accidents"
    ]
   },
   "U5|Risky places in the traffic|Advising": {
    "skill": "Speaking",
-   "grammar": "Imperatives (do / don’t) Do slow down near schools! Don’t speed at crossroad!",
-   "base": "describe appropriate attitudes to avoid accidents at risky places to advise peers about appropriate attitudes to avoid",
+   "grammar": "Imperatives (do / don’t): Do slow down near schools! Don’t speed at crossroads!",
+   "base": "advise peers about appropriate attitudes to avoid accidents",
    "fonctions": [
     "Advising"
    ]
   },
-  "U5|Risky places in the traffic|Using imperatives Do slow down near schools": {
+  "U5|Risky places in the traffic|Using imperatives (do / don’t)": {
    "skill": "Writing",
-   "grammar": "Imperatives (do / don’t) Do slow down near schools! Don’t speed at crossroad!",
-   "base": "describe appropriate attitudes to avoid accidents at risky places to advise peers about appropriate attitudes to avoid",
+   "grammar": "Imperatives (do / don’t): Do slow down near schools! Don’t speed at crossroads!",
+   "base": "advise peers about appropriate attitudes to avoid accidents",
    "fonctions": [
     "Advising"
    ]
@@ -6077,15 +6083,15 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Adverbs of frequency (always, often, usually, sometimes, never,…)",
    "base": "give advice to people about safe attitudes in traffic",
    "fonctions": [
-    "Talking about safe attitudes in the traffic"
+    "Giving advice"
    ]
   },
   "U5|Safe practices in the traffic|Traffic safety": {
    "skill": "Writing",
    "grammar": "Adverbs of frequency (always, often, usually, sometimes, never,…)",
-   "base": "give advice to people about safe attitudes in traffic",
+   "base": "identify safe attitudes to adopt in the traffic",
    "fonctions": [
-    "Giving advice"
+    "Talking about safe attitudes in the traffic"
    ]
   },
   "U5|Safe practices in the traffic|Sensitising": {
@@ -6130,7 +6136,7 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|On the construction site|Construction jobs": {
    "skill": "Listening Comprehension",
-   "grammar": "Review the formation of nouns derived",
+   "grammar": "Review the formation of nouns derived from verbs (build → builder)",
    "base": "identify various jobs on the construction site",
    "fonctions": [
     "Talking about jobs on the construction site"
@@ -6138,16 +6144,16 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|On the construction site|Workers on site": {
    "skill": "Speaking",
-   "grammar": "Review the formation of nouns derived",
-   "base": "name the various professional workers on",
+   "grammar": "Review the formation of nouns derived from verbs (build → builder)",
+   "base": "name the various professional workers on the construction site",
    "fonctions": [
     "Talking about jobs on the construction site"
    ]
   },
-  "U6|On the construction site|Using formation of nouns derived": {
+  "U6|On the construction site|Using formation of nouns derived from verbs": {
    "skill": "Reading Comprehension",
-   "grammar": "Review the formation of nouns derived",
-   "base": "name the various professional workers on",
+   "grammar": "Review the formation of nouns derived from verbs (build → builder)",
+   "base": "name the various professional workers on the construction site",
    "fonctions": [
     "Talking about jobs on the construction site"
    ]
@@ -6253,7 +6259,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Relative adverbs: the day when…, the place where…",
    "base": "describe a typical African market",
    "fonctions": [
-    "Talking about activities on a typical"
+    "Talking about activities on a typical African market"
    ]
   },
   "U7|The market|Market activities": {
@@ -6261,7 +6267,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Relative adverbs: the day when…, the place where…",
    "base": "describe a typical African market",
    "fonctions": [
-    "Talking about activities on a typical"
+    "Talking about activities on a typical African market"
    ]
   },
   "U7|The market|Reading about the market": {
@@ -6269,7 +6275,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Relative adverbs: the day when…, the place where…",
    "base": "describe a typical African market",
    "fonctions": [
-    "African market"
+    "Talking about activities on a typical African market"
    ]
   },
   "U7|The market|Writing about the market": {
@@ -6277,7 +6283,7 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Relative adverbs: the day when…, the place where…",
    "base": "describe a typical African market",
    "fonctions": [
-    "African market"
+    "Talking about activities on a typical African market"
    ]
   },
   "U8|Writing a personal letter|Identifying the different parts of a letter": {
@@ -6315,7 +6321,7 @@ const SEANCES_OFFICIELLES = {
   "U8|The Internet|Uses of the Internet": {
    "skill": "Listening Comprehension",
    "grammar": "Quantifiers (all the, the whole)",
-   "base": "enumerate the various uses of the Internet list the advantages and disadvantages",
+   "base": "enumerate the various uses of the Internet; list the advantages and disadvantages of using the internet",
    "fonctions": [
     "Talking about the uses of the Internet"
    ]
@@ -6325,7 +6331,7 @@ const SEANCES_OFFICIELLES = {
   "U1|Traditional families vs modern families|Traditional families": {
    "skill": "Reading Comprehension",
    "grammar": "Review comparatives and superlatives",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about family relations"
    ]
@@ -6333,15 +6339,15 @@ const SEANCES_OFFICIELLES = {
   "U1|Traditional families vs modern families|Modern families": {
    "skill": "Listening Comprehension",
    "grammar": "Review comparatives and superlatives",
-   "base": "Scan a text (for details)",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Talking about family relations"
    ]
   },
   "U1|Traditional families vs modern families|Comparing families": {
    "skill": "Speaking",
-   "grammar": "Past frequentative tense",
-   "base": "Write a paragraph",
+   "grammar": "Past frequentative tense (past habits: used to / would + base form)",
+   "base": "Express ideas orally",
    "fonctions": [
     "Talking about family relations"
    ]
@@ -6349,31 +6355,31 @@ const SEANCES_OFFICIELLES = {
   "U1|Generation gap|Understanding generation gap": {
    "skill": "Reading Comprehension",
    "grammar": "Review comparatives and superlatives",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about family relations"
    ]
   },
   "U1|Generation gap|Bridging the gap": {
    "skill": "Listening Comprehension",
-   "grammar": "Past frequentative tense",
-   "base": "Identify the characteristics of a paragraph",
+   "grammar": "Past frequentative tense (past habits: used to / would + base form)",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Talking about family relations"
    ]
   },
   "U2|Diseases: malaria, STDs and female genital mutilations|Talking about symptoms, transmission modes": {
    "skill": "Speaking",
-   "grammar": "Passive He was given some medicines. (progressive)",
-   "base": "Grasp the meaning of a spoken or written text",
+   "grammar": "Passive: He was given some medicines. Passive (progressive): Fanta is being examined by the doctor.",
+   "base": "Express ideas orally",
    "fonctions": [
     "Talking about symptoms, transmission modes"
    ]
   },
   "U2|Diseases: malaria, STDs and female genital mutilations|Giving advice": {
    "skill": "Reading Comprehension",
-   "grammar": "Passive He was given some medicines. (progressive)",
-   "base": "Scan a text (for details)",
+   "grammar": "Passive: He was given some medicines. Passive (progressive): Fanta is being examined by the doctor.",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Giving advice"
    ]
@@ -6381,7 +6387,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Diseases: malaria, STDs and female genital mutilations|Talking about diseases": {
    "skill": "Speaking",
    "grammar": "Imperative",
-   "base": "Write a paragraph",
+   "base": "Express ideas orally",
    "fonctions": [
     "Giving advice"
    ]
@@ -6389,23 +6395,23 @@ const SEANCES_OFFICIELLES = {
   "U2|Traditional and modern medicine/ cures|Traditional medicine": {
    "skill": "Reading Comprehension",
    "grammar": "Imperative (negative form): Don’t …",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
-    "Talking about symptoms, transmission modes"
+    "Giving advice"
    ]
   },
   "U2|Traditional and modern medicine/ cures|Modern medicine": {
    "skill": "Listening Comprehension",
    "grammar": "Reported orders (+ negative): I told him or her (not) to go. Insistence: Do bring me a mango!",
-   "base": "Identify the characteristics of a paragraph",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Giving advice"
    ]
   },
   "U3|Drug addiction|Understanding drug addiction": {
    "skill": "Reading Comprehension",
-   "grammar": "Adjectival nouns (the young, the old, the poor, the English)",
-   "base": "Grasp the meaning of a spoken or written text",
+   "grammar": "Adjectival nouns (nominalised adjectives: the young, the old, the poor, the English)",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Giving reasons"
    ]
@@ -6413,110 +6419,115 @@ const SEANCES_OFFICIELLES = {
   "U3|Drug addiction|Causes of drug addiction": {
    "skill": "Listening Comprehension",
    "grammar": "One (e.g. one another, oneself, one’s own)",
-   "base": "Identify the characteristics of a paragraph",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
-    "Persuading"
+    "Giving reasons"
    ]
   },
   "U3|Young people in artisanal mine sites|Giving reasons": {
    "skill": "Reading Comprehension",
-   "grammar": "Adjectival nouns (the young, the old, the poor, the English)",
-   "base": "Grasp the meaning of a spoken or written text",
+   "grammar": "Adjectival nouns (nominalised adjectives: the young, the old, the poor, the English)",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Giving reasons"
    ]
   },
   "U4|Characteristics of teenagers|Teenagers' characteristics": {
    "skill": "Reading Comprehension",
-   "grammar": "Agreement/ disagreement So do I so is he",
-   "base": "Identify the characteristics of a paragraph",
+   "grammar": "Agreement / disagreement: So do I; so is he; I think so; neither do I",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
-    "Talking about teenagers, their rights, and civic responsilities"
+    "Talking about teenagers, their rights, and civic responsibilities"
    ]
   },
   "U4|Characteristics of teenagers|Teenagers' rights": {
    "skill": "Listening Comprehension",
-   "grammar": "Determiners Own (e.g. My own), each Subordination",
-   "base": "Scan a text (for details)",
+   "grammar": "Determiners: possessive + own (my own, his own), each",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
-    "Talking about teenagers, their rights, and civic responsilities"
+    "Talking about teenagers, their rights, and civic responsibilities"
    ]
   },
-  "U4|Characteristics of teenagers|Using determiners Own (e.g": {
+  "U4|Characteristics of teenagers|Using determiners (own, each)": {
    "skill": "Speaking",
-   "grammar": "Determiners Own (e.g. My own), each Subordination",
-   "base": "Write a paragraph",
+   "grammar": "Determiners: possessive + own (my own, his own), each",
+   "base": "Express ideas orally",
    "fonctions": [
-    "Talking about teenagers, their rights, and civic responsilities"
+    "Talking about teenagers, their rights, and civic responsibilities"
    ]
   },
   "U4|Child’s rights and civic responsibilities|Child rights": {
    "skill": "Reading Comprehension",
-   "grammar": "Agreement/ disagreement So do I so is he",
-   "base": "Grasp the meaning of a spoken or written text",
+   "grammar": "Agreement / disagreement: So do I; so is he; I think so; neither do I",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
-    "Talking about teenagers, their rights, and civic responsilities"
+    "Talking about teenagers, their rights, and civic responsibilities"
    ]
   },
   "U4|Child’s rights and civic responsibilities|Civic duties": {
    "skill": "Listening Comprehension",
-   "grammar": "Determiners Own (e.g. My own), each Subordination",
-   "base": "Identify the characteristics of a paragraph",
+   "grammar": "Determiners: possessive + own (my own, his own), each",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
-    "Talking about teenagers, their rights, and civic responsilities"
+    "Talking about teenagers, their rights, and civic responsibilities"
    ]
   },
   "U5|Climate change: causes and effects|Causes of climate change": {
    "skill": "Reading Comprehension",
    "grammar": "Noun formation : Prefix : eco-citizen Suffix citizenship, cleanliness",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
-    "Talking about causes and effects of climate change Sensitising on environmental issues"
+    "Talking about causes and effects of climate change",
+    "Sensitising on environmental issues"
    ]
   },
   "U5|Climate change: causes and effects|Effects of climate change": {
    "skill": "Listening Comprehension",
    "grammar": "Noun formation : Prefix : eco-citizen Suffix citizenship, cleanliness",
-   "base": "Scan a text (for details)",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
-    "Talking about causes and effects of climate change Sensitising on environmental issues"
+    "Talking about causes and effects of climate change",
+    "Sensitising on environmental issues"
    ]
   },
   "U5|Climate change: causes and effects|Using noun formation": {
    "skill": "Speaking",
    "grammar": "Noun formation : Prefix : eco-citizen Suffix citizenship, cleanliness",
-   "base": "Write a paragraph",
+   "base": "Express ideas orally",
    "fonctions": [
-    "Talking about causes and effects of climate change Sensitising on environmental issues"
+    "Talking about causes and effects of climate change",
+    "Sensitising on environmental issues"
    ]
   },
   "U5|Eco-citizenship|Eco-citizen": {
    "skill": "Reading Comprehension",
    "grammar": "Noun formation : Prefix : eco-citizen Suffix citizenship, cleanliness",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
-    "Talking about causes and effects of climate change Sensitising on environmental issues"
+    "Talking about causes and effects of climate change",
+    "Sensitising on environmental issues"
    ]
   },
   "U5|Eco-citizenship|Environmental attitudes": {
    "skill": "Listening Comprehension",
    "grammar": "Indirect interrogation Tell me where he is",
-   "base": "Identify the characteristics of a paragraph",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
-    "Talking about causes and effects of climate change Sensitising on environmental issues"
+    "Talking about causes and effects of climate change",
+    "Sensitising on environmental issues"
    ]
   },
   "U6|Women’s empowerment (access to education, access to land…)|Using verb + preposition": {
    "skill": "Reading Comprehension",
-   "grammar": "Verb + preposition: care for, be afraid of, pleased",
-   "base": "Grasp the meaning of a spoken or written text",
+   "grammar": "Verb / adjective + preposition: care for, be afraid of, pleased with, willing to",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about women and development"
    ]
   },
   "U6|Women’s empowerment (access to education, access to land…)|Listening to a talk on women’s empowerment": {
    "skill": "Listening Comprehension",
-   "grammar": "Verb + preposition: care for, be afraid of, pleased",
+   "grammar": "Verb / adjective + preposition: care for, be afraid of, pleased with, willing to",
    "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Talking about women and development"
@@ -6524,8 +6535,8 @@ const SEANCES_OFFICIELLES = {
   },
   "U6|The contribution of women in economies|Women in economies": {
    "skill": "Reading Comprehension",
-   "grammar": "Verb + preposition: care for, be afraid of, pleased with, willing to",
-   "base": "skim a text (for the gist)",
+   "grammar": "Verb / adjective + preposition: care for, be afraid of, pleased with, willing to",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about women and development"
    ]
@@ -6533,7 +6544,7 @@ const SEANCES_OFFICIELLES = {
   "U7|Statistics on road accidents|Causes of road accidents": {
    "skill": "Reading Comprehension",
    "grammar": "Adverbs (manner, place, time) and their position",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Giving causes and effects"
    ]
@@ -6541,7 +6552,7 @@ const SEANCES_OFFICIELLES = {
   "U7|Statistics on road accidents|Consequences": {
    "skill": "Listening Comprehension",
    "grammar": "Adverbs (manner, place, time) and their position",
-   "base": "Skim a text (for the gist)",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Giving causes and effects"
    ]
@@ -6549,7 +6560,7 @@ const SEANCES_OFFICIELLES = {
   "U7|Statistics on road accidents|Giving causes and effects": {
    "skill": "Speaking",
    "grammar": "Past perfect For vs. during",
-   "base": "Scan a text (for details)",
+   "base": "Express ideas orally",
    "fonctions": [
     "Giving causes and effects"
    ]
@@ -6557,7 +6568,7 @@ const SEANCES_OFFICIELLES = {
   "U7|Reducing road accidents|Prevention measures": {
    "skill": "Reading Comprehension",
    "grammar": "Adverbs (manner, place, time) and their position",
-   "base": "Grasp the meaning of a spoken or written text",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Giving causes and effects"
    ]
@@ -6565,7 +6576,7 @@ const SEANCES_OFFICIELLES = {
   "U7|Reducing road accidents|Safety tips": {
    "skill": "Listening Comprehension",
    "grammar": "Past perfect For vs. during",
-   "base": "Skim a text (for the gist)",
+   "base": "Grasp the meaning of a spoken or written text",
    "fonctions": [
     "Expressing opinions"
    ]
@@ -6573,7 +6584,7 @@ const SEANCES_OFFICIELLES = {
   "U8|Advantages and drawbacks of ICTs|Advantages of ICTs": {
    "skill": "Reading Comprehension",
    "grammar": "Conjunctions (until/till, while, as soon as, so as to, in order to)",
-   "base": "Identify the characteristics of a paragraph",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about ICTs"
    ]
@@ -6581,7 +6592,7 @@ const SEANCES_OFFICIELLES = {
   "U8|The Net Generation|Net Generation characteristics": {
    "skill": "Reading Comprehension",
    "grammar": "Conjunctions (until/till, while, as soon as, so as to, in order to)",
-   "base": "Identify the characteristics of a paragraph",
+   "base": "Skim a text (for the gist); scan a text (for details)",
    "fonctions": [
     "Talking about ICTs"
    ]
@@ -6591,7 +6602,7 @@ const SEANCES_OFFICIELLES = {
   "U1|The ideal partner (Physical and moral features)|Discussing advantages and drawbacks": {
    "skill": "Speaking",
    "grammar": "Review of: Past perfect tense",
-   "base": "Skim a text (reading for the general idea or the gist)",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
     "Discussing advantages and drawbacks"
    ]
@@ -6607,7 +6618,7 @@ const SEANCES_OFFICIELLES = {
   "U1|The ideal partner (Physical and moral features)|Using past perfect tense": {
    "skill": "Listening Comprehension",
    "grammar": "Review of: Past perfect tense",
-   "base": "Write a paragraph",
+   "base": "Identify the topic sentence and the secondary ideas of a paragraph",
    "fonctions": [
     "Describing features"
    ]
@@ -6647,7 +6658,7 @@ const SEANCES_OFFICIELLES = {
   "U2|Sound nutrition|Explaining purpose": {
    "skill": "Speaking",
    "grammar": "Passive voice",
-   "base": "Write a paragraph",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
     "Explaining purpose"
    ]
@@ -6711,7 +6722,7 @@ const SEANCES_OFFICIELLES = {
   "U4|African outstanding figures and their ideas|Narrating events": {
    "skill": "Speaking",
    "grammar": "Review",
-   "base": "Scan a text",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
     "narrating events"
    ]
@@ -6727,7 +6738,7 @@ const SEANCES_OFFICIELLES = {
   "U4|National heroes (biography, achievements…) (Project work )|Expressing opinions": {
    "skill": "Listening Comprehension",
    "grammar": "Exclamatives Review of forms already taught",
-   "base": "Write a paragraph",
+   "base": "Identify the topic sentence and the secondary ideas of a paragraph",
    "fonctions": [
     "expressing opinions"
    ]
@@ -6751,7 +6762,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Renewable energy|Discussing reasons": {
    "skill": "Speaking",
    "grammar": "Question tags",
-   "base": "Identify the topic sentence and the secondary ideas of a paragraph",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
     "Discussing reasons"
    ]
@@ -6759,7 +6770,7 @@ const SEANCES_OFFICIELLES = {
   "U5|Sustainable development (protecting the environment)|Discussing reasons": {
    "skill": "Speaking",
    "grammar": "Interrogatives",
-   "base": "Skim a text (reading for the general idea or the gist)",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
     "Discussing reasons"
    ]
@@ -6772,12 +6783,13 @@ const SEANCES_OFFICIELLES = {
     "Persuading"
    ]
   },
-  "U6|School majors and careers (educational counselling)|Talking about training and job opportunities Sensitising": {
+  "U6|School majors and careers (educational counselling)|Talking about training and job opportunities": {
    "skill": "Speaking",
    "grammar": "Obligation (I am to leave here at 6 - I’ve got to …) Infinitive",
-   "base": "Skim a text (reading for the general idea or the gist)",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
-    "Talking about training and job opportunities Sensitising"
+    "Talking about training and job opportunities",
+    "Sensitising"
    ]
   },
   "U6|School majors and careers (educational counselling)|Listening to a talk on school majors and careers": {
@@ -6785,7 +6797,8 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Without to (after the verbs: see, watch, hear, listen, make, have, let, must, can)",
    "base": "Identify the topic sentence and the secondary ideas of a paragraph",
    "fonctions": [
-    "Talking about training and job opportunities Sensitising"
+    "Talking about training and job opportunities",
+    "Sensitising"
    ]
   },
   "U6|Self-employment initiatives|Self-employment benefits": {
@@ -6793,7 +6806,8 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Obligation (I am to leave here at 6 - I’ve got to …) Infinitive",
    "base": "Skim a text (reading for the general idea or the gist)",
    "fonctions": [
-    "Talking about training and job opportunities Sensitising"
+    "Talking about training and job opportunities",
+    "Sensitising"
    ]
   },
   "U7|Cultural tolerance|Cultural diversity": {
@@ -6801,7 +6815,8 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Pronouns",
    "base": "Skim a text (reading for the general idea or the gist)",
    "fonctions": [
-    "Sensitising Giving opinions"
+    "Sensitising",
+    "Giving opinions"
    ]
   },
   "U7|Cultural tolerance|Tolerance and cohesion": {
@@ -6809,23 +6824,26 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Possessive (a friend of his/mine, …)",
    "base": "Scan a text (reading for specific information or details)",
    "fonctions": [
-    "Sensitising Giving opinions"
+    "Sensitising",
+    "Giving opinions"
    ]
   },
-  "U7|Cultural tolerance|Sensitising Giving opinions": {
+  "U7|Cultural tolerance|Sensitising and giving opinions": {
    "skill": "Speaking",
    "grammar": "Affixes: Revise and expand prefixes and suffixes in nouns formation",
-   "base": "Write a paragraph",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
-    "Sensitising Giving opinions"
+    "Sensitising",
+    "Giving opinions"
    ]
   },
-  "U7|Religious tolerance|Sensitising Giving opinions": {
+  "U7|Religious tolerance|Sensitising and giving opinions": {
    "skill": "Speaking",
    "grammar": "Pronouns",
-   "base": "Skim a text (reading for the general idea or the gist)",
+   "base": "Use the vocabulary and grammar items to express themselves orally",
    "fonctions": [
-    "Sensitising Giving opinions"
+    "Sensitising",
+    "Giving opinions"
    ]
   },
   "U7|Religious tolerance|Using pronouns": {
@@ -6833,7 +6851,8 @@ const SEANCES_OFFICIELLES = {
    "grammar": "Pronouns",
    "base": "Identify the topic sentence and the secondary ideas of a paragraph",
    "fonctions": [
-    "Sensitising Giving opinions"
+    "Sensitising",
+    "Giving opinions"
    ]
   },
   "U8|Songs/ Poems (authentic)|Anglophone songs": {
@@ -10914,9 +10933,9 @@ const SUPPORT_TEXTS = {
    "At the end of the lesson the teacher says, 'Close your books. Stand up. Go out quietly.' The pupils obey and the classroom is soon empty and clean."
   ],
   "U1|Classroom language|Giving instructions": [
-   "Awa does not hear well. She raises her hand. She says, 'Excuse me, Madam. Can you repeat, please?' The teacher repeats the question slowly. Awa says, 'Thank you, Madam.'",
-   "Karim needs a pen. He says, 'May I borrow a pen, please?' Fatou gives him her pen. Later Karim says, 'May I go out, please?' The teacher answers, 'Yes, you may. Come back quickly.'",
-   "Before the bell, Fatou asks, 'May I clean the board, Madam?' The teacher smiles and says, 'Yes, you may. Thank you, Fatou.' The pupils leave the room in good order."
+   "Before the English lesson, Ali and Fatou prepare the classroom. Ali says, 'Fatou, open the windows, please.' Fatou does not hear well. She asks, 'Sorry? Can you repeat, please?' Ali says again, 'Open the windows, please.'",
+   "Then Fatou says, 'Ali, clean the blackboard. Take my duster.' Ali cleans the blackboard. He says, 'Now put the chairs under the tables.' They work together.",
+   "When the teacher arrives, Fatou says to the class, 'Sit down and open your books.' The pupils sit down quietly. The lesson can begin."
   ],
   "U1|Classroom objects and cardinal numbers|Using plural of nouns": [
    "Look at our classroom. There is a board. There is a table for the teacher. There are thirteen benches and there are fourteen desks. There are fifteen schoolbags on the floor.",
@@ -11053,7 +11072,7 @@ const SUPPORT_TEXTS = {
    "Awa answers kindly: 'Go straight on to the big tree. Then turn left and walk about two hundred metres. The health centre is on your right, just behind the post office.' The visitor thanks her.",
    "The visitor repeats the directions to be sure. Awa listens and corrects one word. Then he or she thanks her again and walks towards the big tree at the end of the street."
   ],
-  "U7|Places and their locations.|Using imperatives places": [
+  "U7|Places and their locations.|Using imperatives (go straight, turn left…)": [
    "Listen carefully and follow the road. Go out of the school. Turn right at the gate. Walk to the crossroads. Don't take the small path on the left.",
    "Cross the main road carefully. Go straight on to the mosque. Turn left after the mosque. Stop in front of the blue building. That is the town hall, next to the police station.",
    "Repeat the directions to your neighbour. Then draw a small map in your exercise book. Write the name of each building and show the way with a line and an arrow."
@@ -11443,7 +11462,7 @@ const SUPPORT_TEXTS = {
    "'Don't cross while a vehicle is overtaking another. Don't sit on the edge of a cart. Don't push a friend near the road, even for fun.' Awa writes the advice on a poster and fixes it near the school gate.",
    "The officer ended with one sentence which the pupils copied in their exercise books: 'Do think of the person who is waiting for you at home.' Awa said that this advice was worth all the others together."
   ],
-  "U5|Risky places in the traffic|Using imperatives Do slow down near schools": [
+  "U5|Risky places in the traffic|Using imperatives (do / don’t)": [
    "The town hall has painted new signs on the main road. Near the primary school one reads: 'Do slow down near schools!' At the crossroads another says: 'Don't speed at crossroad!'",
    "In front of the health centre a third sign says: 'Do keep the entrance free!' The pupils of the fifth form repeated these sentences during the assembly and explained them to the younger pupils in the local language.",
    "The drivers who pass every day have noticed the change. Some of them slow down now without being asked. The headmaster says that a sign which is understood works better than a fine which is feared."
@@ -11463,7 +11482,7 @@ const SUPPORT_TEXTS = {
    "The watering can is used only in the dry season, for the small garden near the well. My grandfather always says that a tool which is cleaned after the work lasts twice as long. He never leaves a hoe in the rain.",
    "I often help him during the holidays. He shows me how to hold the hoe so that my back does not hurt. He says that the field teaches patience, and that patience is the first tool of every farmer."
   ],
-  "U6|On the construction site|Using formation of nouns derived": [
+  "U6|On the construction site|Using formation of nouns derived from verbs": [
    "On the building site near the market, many trades work together. The man who builds the walls is a builder. The one who paints the doors is a painter. The one who welds the iron is a welder.",
    "The one who drives the lorry is a driver, and the one who manages the work is a manager. Awa's cousin is a carpenter; he or she makes the doors and the windows. Each worker has a clear task, and the building rises quickly.",
    "The engineer who supervises the work comes twice a week. He checks the measurements and signs the report. Awa's cousin hopes to become a foreman one day, because the one who leads a team earns more and learns faster."
@@ -11636,7 +11655,7 @@ const SUPPORT_TEXTS = {
    "But the reality is hard. The strong work ten hours in a narrow hole, and the weak carry the stones. The sick are rarely treated, because there is no health post nearby. Girls who follow their brothers are exposed to violence and to early pregnancy. Teachers say that the educated are better armed, and that a child who finishes his or her schooling has more chances than a child who digs at fifteen.",
    "The rich who buy the gold are far away; the poor who dig it stay. Associations now visit the sites to register the children and to convince the families to send them back to school. The results are slow, but the educated are the only ones who will one day negotiate a better price for what the ground gives."
   ],
-  "U4|Characteristics of teenagers|Using determiners Own (e.g": [
+  "U4|Characteristics of teenagers|Using determiners (own, each)": [
    "A teenager wants a space of their own. They want their own room if the house allows it, their own corner, their own opinion. Each boy and each girl of this age discovers that the world is larger than the family compound.",
    "Awa says that each member of her class has his or her own way of growing up. Some become quiet; others talk all the time. Her brother keeps his own secrets, although he tells his friends everything. Parents who remember their own youth understand this better. Each generation goes through the same passage, and each one believes that it is the first.",
    "Each family finds its own balance. Awa's mother lets her daughter choose her own clothes, but she keeps her own word on the hour of return. Awa accepts, because the rule has been explained and not imposed. Each side gives a little, and each side keeps its dignity."
@@ -11798,7 +11817,7 @@ const SUPPORT_TEXTS = {
    "Others say that one person can change nothing. I don't believe that, and the women of the market garden don't either. They dug half-moons on a stony hill, and today that hill produces vegetables. If each school planted a hundred trees every year, the region would be unrecognisable in a generation. Let us begin with our own compound.",
    "People also say that we have no time for these things. I don't agree, and the pupils of the environment club don't either. They water their trees every evening, after their homework, and their results at school have not fallen. What we lack is not time; it is the habit. And a habit is taken in three weeks, as everyone who has tried knows."
   ],
-  "U6|School majors and careers (educational counselling)|Talking about training and job opportunities Sensitising": [
+  "U6|School majors and careers (educational counselling)|Talking about training and job opportunities": [
    "The counsellor is to visit our school on Thursday. We have got to prepare our questions, because he or she will not come back before the end of the year. Many pupils have got to choose between the literary series and the scientific one, and few of them know what each one leads to.",
    "A pupil who likes mathematics is to consider the technical schools, where places are limited. One who prefers languages has got to think of teaching, translation or tourism. The counsellor insists on one point: a choice which is made by imitation is rarely a good choice. Each pupil has got to look at his or her own results and at the needs of the country.",
    "The pupils are also to think about the trades which exist around them. We have got mechanics, tailors, masons, nurses and agents of the agricultural service in our own town. Each of them has followed a training which can be named and dated. The counsellor is to bring the list of the technical schools of the region, with the conditions of admission and the dates of the entrance examination."
@@ -11808,12 +11827,12 @@ const SUPPORT_TEXTS = {
    "'Today I want you to hear three things. First, no series is superior to another; they lead to different trades. Second, the country needs technicians as much as it needs lawyers. Third, your results of this year tell you something true about yourself. Listen to them, and come and see me before you fill in any form.'",
    "'I have met pupils who have become excellent technicians after a mediocre year in the literary series. I have never met anyone who succeeded in a path he or she hated. And I have seen, many times, that the pupils who asked questions early were the ones who chose well. So ask. That is all I have come to tell you this morning.'"
   ],
-  "U7|Cultural tolerance|Sensitising Giving opinions": [
+  "U7|Cultural tolerance|Sensitising and giving opinions": [
    "Burkina Faso counts about sixty ethnic groups. This diversity could have produced division; it has produced a habit of understanding instead. The joking relationship between certain groups allows people to say in laughter what would be unacceptable in anger.",
    "Intolerance often begins with ignorance, and ignorance begins with silence. Misunderstanding grows when nobody explains. Awareness, acceptance and friendship are built in the classroom, where a child discovers that his or her neighbour's language is as rich as his or her own. A country which loses this inheritance would become poorer, however much money it might earn.",
    "The club of the school has organised a cultural week. Each class presents a dance, a dish and a proverb from a different region. The preparation itself produces the result which was looked for: in order to present the culture of another group, a pupil has to meet someone who belongs to it. Misinformation disappears when a name becomes a face, and rediscovery replaces repetition."
   ],
-  "U7|Religious tolerance|Sensitising Giving opinions": [
+  "U7|Religious tolerance|Sensitising and giving opinions": [
    "In the same compound, Awa's family celebrates Ramadan and her neighbours celebrate Christmas. Each of them is invited by the other. They have shared meals for thirty years, and nobody among them has ever asked the other to change.",
    "This is not an accident; it is a choice which is renewed every year. Some people think that faith separates; others answer that it is the use of faith which separates, not faith itself. Those who live together learn that what unites them is larger than what distinguishes them. Everyone can protect this peace, and no one can protect it alone.",
    "The pupils prepared a short play about a quarrel between two neighbours. In the play, nobody wins. The two families lose a well which they had dug together. The audience laughed at the beginning and became silent at the end. The teacher said afterwards that the best lesson is the one which the pupils give themselves, and that no speech of his or her would have been as convincing."
@@ -25542,8 +25561,12 @@ const TRANSFORMS_FAMILLE = {
     ['The pupils cleaned the classroom.', 'The classroom was cleaned by the pupils.'],
     ['My mother prepared the meal.', 'The meal was prepared by my mother.'],
     ['The villagers built the school.', 'The school was built by the villagers.']] },
-  'comparaison': { c: 'Join the two sentences with a comparative and <i>than</i>, using the adjective in brackets.', p: [
+  'comparaison': { c: 'Join the two sentences with a comparison, using the words in brackets (-er / more … than when nothing else is given).', p: [
     ['Awa is 12 years old. Fatou is 14 years old. (old)', 'Fatou is older than Awa.'],
+    ['A bicycle costs 50,000 francs. A motorbike costs 600,000 francs. (less … than / expensive)', 'A bicycle is less expensive than a motorbike.'],
+    ['Awa is 1.50 m tall. Fatou is 1.50 m tall too. (as … as / tall)', 'Awa is as tall as Fatou.'],
+    ['The well is not very deep. The river is very deep. (less … than / deep)', 'The well is less deep than the river.'],
+    ['Ali runs fast. Moussa runs fast too. (as … as / fast)', 'Ali runs as fast as Moussa.'],
     ['The red bag costs 5,000 francs. The blue bag costs 3,000 francs. (cheap)', 'The blue bag is cheaper than the red bag.'],
     ['A bike is slow. A motorbike is fast. (fast)', 'A motorbike is faster than a bike.'],
     ['Ouagadougou is a big city. Dori is a small town. (big)', 'Ouagadougou is bigger than Dori.'],
@@ -25758,7 +25781,10 @@ const TRANSFORMS_FAMILLE = {
     ['I can’t swim.', 'I wish I could swim.'],
     ['Awa doesn’t live near the school.', 'Awa wishes she lived near the school.'],
     ['We don’t have a library.', 'We wish we had a library.'],
-    ['My brother isn’t here.', 'I wish my brother were here.']] },
+    ['My brother isn’t here.', 'I wish my brother were here.'],
+    ['I didn’t study for the test. (regret)', 'I wish I had studied for the test.'],
+    ['We didn’t plant trees last year. (regret)', 'We wish we had planted trees last year.'],
+    ['My neighbour plays loud music every night. (wish + would)', 'I wish my neighbour would stop playing loud music.']] },
   'noms adjectivaux': { c: 'Rewrite each sentence with <i>the</i> + adjective, without the word <i>people</i>.', p: [
     ['Poor people need help.', 'The poor need help.'],
     ['Rich people pay more taxes.', 'The rich pay more taxes.'],
@@ -26502,7 +26528,7 @@ const KITS_GRAMMAIRE = {
     return kitRes(ph, i, v, ['to ' + v, paraFormesVerbe(v).ing]);
   },
   'superlatifs': ph => kitSuperlatif(ph),
-  'comparaison': ph => kitSuperlatif(ph),
+  'comparaison': ph => kitComparatif(ph) || kitSuperlatif(ph),
   'relatives': ph => {
     const m = /\b(who|which)\s+(?=[a-z]+)/.exec(ph); if (!m) return null;
     if (/\b(in|of|on|by|for|to|with|from|at|about)\s$/i.test(ph.slice(0, m.index))) return null;   // « in which » : autre construction
@@ -26528,6 +26554,21 @@ function kitContinu(ph, passe) {
   const base = kitBaseDeIng(m[2]); if (!base || /^(thing|nothing|something|morning|evening|king|during|being)$/.test(m[2])) return null;
   const f = kitFormes(base);
   return kitRes(ph, m.index, m[0], [m[1] + ' ' + f.base, f.ing]);
+}
+/* v13.44 — Comparatifs de supériorité, d'infériorité et d'égalité : l'exercice
+   ne portait que sur le superlatif. */
+function kitComparatif(ph) {
+  let m = /\bas\s+([a-z]{3,}(?:-[a-z]+)?)\s+as\b/.exec(ph);
+  if (m && !/^(well|soon|far|long|much|many|follows?|such|regards?|usual)$/.test(m[1]) && !/\bnot\s+$/.test(ph.slice(0, m.index)))
+    return kitRes(ph, m.index, m[0], ['as ' + m[1] + ' than', 'more ' + m[1] + ' as']);
+  m = /\bless\s+([a-z]{3,})\s+than\b/.exec(ph);
+  if (m) return kitRes(ph, m.index, m[0], ['less ' + m[1] + ' as', 'the least ' + m[1] + ' than']);
+  m = /\b(better|worse)\s+than\b/.exec(ph);
+  if (m) return kitRes(ph, m.index, m[0], ['more ' + m[0], (m[1] === 'better' ? 'best' : 'worst') + ' than']);
+  m = /\b([a-z]{3,}(?:er|ier))\s+than\b/.exec(ph);
+  if (m && !/^(rather|other|whether|either|neither|never|ever|under|over|after|order|number|water|together|matter|later|sooner|earlier)$/.test(m[1]))
+    return kitRes(ph, m.index, m[0], ['more ' + m[0], m[1] + ' that']);
+  return null;
 }
 function kitSuperlatif(ph) {
   let m = /\b(the\s+)(most|least)\s+([a-z]{4,})\b/.exec(ph);
@@ -26568,6 +26609,7 @@ function exGrammaireOrdre(ctx) {
            note: 'The steps are taken from the support text.' };
 }
 const BANQUE_GRAMMAIRE = {
+  'souhaits et regrets': ['I wish I had more time to read.', 'Many pupils wish they could use a computer at school.', 'If only the rains were more regular!', 'She wishes she had listened to her teacher.', 'I wish our neighbours would stop burning plastic.', 'The farmers wish they had planted earlier.'],
   'questions fermées': ['Do you like rice with sauce?', 'Does your sister go to school every day?', 'Do the pupils sweep the classroom before the lesson?', 'Does Awa live near the market?', 'Do they play football after school?', 'Does the bus stop in front of the school?', 'Is your teacher in the classroom?', 'Are the girls in the yard?'],
   'comparatifs doubles': ['The more you read, the more you learn.', 'The older the children are, the more water they need.', 'The cleaner the yard is, the fewer flies come.', 'The more the pupils practise, the better they speak English.', 'The earlier you start, the sooner you finish.', 'The more we plant trees, the less the wind damages the fields.'],
   'accord et désaccord': ['Awa likes mangoes, and so does she.', 'Karim is not tired. Neither am I.', 'The pupils were happy, and so were we.', 'I do not eat fish. Neither do they.', 'He can swim, and so can she.', 'We have finished our work, and so have they.'],
@@ -26582,6 +26624,8 @@ function exGrammaireChoix(ctx, f) {
   const permis = FAMS_QUESTION.has(f.nom);
   const sents = [...new Set(sentencesOf(ctx.text).map(x => sansLocuteur(x).trim().replace(/^[“”"']+|[“”"']+$/g, '')).filter(x => { const w = wordsOf(x).length; return w >= (permis ? 3 : 5) && w <= 26 && /^[A-Z]/.test(x) && (permis || (!/[“”"]/.test(x) && !/\?$/.test(x))); }))];
   const trouves = [];
+  /* v13.44 — Un item marqué « secondaire » par son kit ne compte qu'une fois. */
+  const utiles = () => trouves.filter(t => !t.r.secondaire).length + Math.min(1, trouves.filter(t => t.r.secondaire).length);
   for (const ph of sents) {
     let r = null; try { r = kit(ph); } catch (e) { r = null; }
     if (r && r.faux && r.faux.length >= 1) trouves.push({ ph, r });
@@ -26589,11 +26633,11 @@ function exGrammaireChoix(ctx, f) {
   /* Le texte porte parfois le point deux fois seulement : on complète avec des phrases d'autres textes du logiciel
      qui portent la même forme, en commençant par celles de la classe de l'élève. */
   let dAilleurs = 0;
-  if (trouves.length < Math.max(3, Math.min(ctx.n || 4, 4))) {
+  if (utiles() < Math.max(3, Math.min(ctx.n || 4, 4))) {
     const ph0 = phrasier(), bas = String(ctx.text || '').toLowerCase();
     const ordre = ph0.phrases.map((p, i) => ({ p, d: proximite(ctx.c, p.c) })).sort((a, b) => a.d - b.d);
     for (const { p } of ordre) {
-      if (trouves.length >= Math.max(3, Math.min(ctx.n || 4, 4))) break;
+      if (utiles() >= Math.max(3, Math.min(ctx.n || 4, 4))) break;
       if (bas.indexOf(p.s.toLowerCase()) >= 0) continue;
       const x = sansLocuteur(p.s).trim();
       let r = null; try { r = kit(x); } catch (e) { r = null; }
@@ -26601,14 +26645,16 @@ function exGrammaireChoix(ctx, f) {
     }
   }
   /* Dernier recours : quelques phrases modèles du point, écrites pour lui. */
-  if (trouves.length < 3 && BANQUE_GRAMMAIRE[f.nom]) {
+  if (utiles() < 3 && BANQUE_GRAMMAIRE[f.nom]) {
     for (const x of BANQUE_GRAMMAIRE[f.nom]) {
-      if (trouves.length >= Math.max(3, Math.min(ctx.n || 4, 4))) break;
+      if (utiles() >= Math.max(3, Math.min(ctx.n || 4, 4))) break;
       if (trouves.some(t => t.ph === x)) continue;
       let r = null; try { r = kit(x); } catch (e) { r = null; }
       if (r && r.faux && r.faux.length >= 1) { trouves.push({ ph: x, r, ext: true }); dAilleurs++; }
     }
   }
+  { const sec = trouves.filter(t => t.r.secondaire);
+    if (sec.length > 1) { const garde = sec[0]; for (let k = trouves.length - 1; k >= 0; k--) if (trouves[k].r.secondaire && trouves[k] !== garde) trouves.splice(k, 1); } }
   if (trouves.length < 3) return null;
   /* Les phrases du texte d'abord, puis les phrases d'ailleurs. */
   const duTexte = trouves.filter(t => !t.ext), dehors = trouves.filter(t => t.ext);
@@ -26742,14 +26788,35 @@ Object.assign(KITS_GRAMMAIRE, {
     const f = kitFormes(m[2]);
     return kitRes(ph, m.index, m[0], [m[1].replace(/ to$/, '') + ' ' + m[2], 'for ' + f.ing]);
   },
+  /* v13.44 — Le point est d'abord « wish / if only + temps du passé ».
+     « should have » n'est retenu que suivi d'un participe passé (« every
+     school should have its own team » n'est pas un regret), et il est
+     secondaire : un exercice n'en porte qu'un au plus. */
   'souhaits et regrets': ph => {
-    let m = /\bshould have\s+([a-z]+)\b/.exec(ph);
-    if (m) return kitRes(ph, m.index, 'should have', ['should of', 'should had']);
-    m = /\b(wish(?:es)?)\s+(he|she|it|they|we|I|you|the [a-z]+|[a-z]+)\s+(were|had|could|would)\b/.exec(ph);
-    if (!m) return null;
-    const MAP = { were: 'is', had: 'has', could: 'can', would: 'will' };
-    const i = m.index + m[0].length - m[3].length;
-    return kitRes(ph, i, m[3], [MAP[m[3]], m[3] === 'would' ? 'did' : 'will']);
+    const SUJ = "(?:that\\s+)?((?:[A-Za-z\u2019']+\\s+){0,2}?[A-Za-z\u2019']+)";
+    let m = new RegExp("\\b(wish(?:es|ed)?|[Ii]f only)\\s+" + SUJ + "\\s+(were|had|could|would)\\b").exec(ph);
+    if (m) {
+      const MAP = { were: 'is', had: 'has', could: 'can', would: 'will' };
+      const i = m.index + m[0].length - m[3].length;
+      const r = kitRes(ph, i, m[3], [MAP[m[3]], m[3] === 'would' ? 'did' : 'will']);
+      if (r) return r;
+    }
+    m = new RegExp("\\b(wish(?:es|ed)?|[Ii]f only)\\s+" + SUJ + "\\s+([a-z]{3,})\\b").exec(ph);
+    if (m && !/^(was|were|had|could|would|did|to)$/.test(m[3])) {
+      const base = kitBaseDePasse(m[3]);
+      if (base && base !== m[3]) {
+        const i = m.index + m[0].length - m[3].length;
+        const r = kitRes(ph, i, m[3], [base, 'will ' + base]);
+        if (r) return r;
+      }
+    }
+    m = /\b(should|could)\s+have\s+([a-z]{3,})\b/.exec(ph);
+    if (m && kitEstParticipe(m[2])) {
+      const base = kitBaseDeParticipe(m[2]) || m[2];
+      const r = kitRes(ph, m.index, m[0], [m[1] + ' had ' + m[2], m[1] + ' have ' + base, m[1] + ' ' + m[2]]);
+      if (r) { r.secondaire = true; return r; }
+    }
+    return null;
   },
   'present perfect': ph => {
     const m = new RegExp('\\b(has|have)\\s+(?:' + KIT_ADV + '\\s+)*([a-z]+)\\b').exec(ph);
@@ -26833,7 +26900,9 @@ Object.assign(KITS_GRAMMAIRE, {
       if (!base) continue;
       const faux = SUF.filter(x => x !== suf).map(x => base.replace(/e$/, '') + x).filter(x => { try { return !lexiqueMinuscule().has(x) && !(typeof definitions === 'function' && definitions().has(x)); } catch (e) { return true; } });
       if (faux.length < 2) continue;
-      const i = ph.indexOf(w);
+      const mw = new RegExp('(^|[^A-Za-z\u2019\'-])' + echappe(w) + '(?![A-Za-z])').exec(ph);
+      if (!mw) continue;
+      const i = mw.index + mw[1].length;
       return kitRes(ph, i, w, faux.slice(0, 2));
     }
     return null;
@@ -26886,7 +26955,7 @@ function exGrammaire(ctx) {
     for (const ph of choisies) {
       const m = String(ph).match(marqueDe(ph, f));
       if (!m || !f.choix.includes(m[0].toLowerCase())) continue;
-      const i = ph.indexOf(m[0]);
+      const i = m.index;   /* v13.44 — position de l'article repéré, non premier « a » venu (« Arn……ud ») */
       items.push(esc(ph.slice(0, i)) + '……………' + esc(ph.slice(i + m[0].length)));
       cle.push(m[0] + repereDe(ph, ctx.text, ctx.lineNums));
     }
@@ -26899,7 +26968,7 @@ function exGrammaire(ctx) {
         if (items.length >= Math.max(3, Math.min(ctx.n || 4, 4))) break;
         const m = String(ph).match(marqueDe(ph, f));
         if (!m || !f.choix.includes(m[0].toLowerCase())) continue;
-        const i = ph.indexOf(m[0]);
+        const i = m.index;   /* v13.44 — position de l'article repéré, non premier « a » venu (« Arn……ud ») */
         items.push(esc(ph.slice(0, i)) + '……………' + esc(ph.slice(i + m[0].length)));
         cle.push(m[0] + ' (sentence not in the text)');
       }
@@ -27114,6 +27183,57 @@ function modelesConnecteurs(libelle) {
   return trouves.filter(x => !trouves.some(y => y !== x && y.k.length > x.k.length && y.k.includes(x.k) && Math.abs(y.i - x.i) < y.k.length)).map(x => x.ph);
 }
 
+/* v13.44 — Règle des connecteurs : chaque connecteur montré en gras au
+   tableau ou relevé dans le texte est classé ; ceux que le libellé nomme
+   s'y ajoutent. Un connecteur vu par la classe n'est plus absent du cours. */
+const ROLES_CONNECTEURS = [
+  ['addition', ['and', 'moreover', 'furthermore', 'in addition', 'as well as', 'besides', 'nor']],
+  ['contrast', ['but', 'yet', 'however', 'nevertheless', 'still', 'although', 'though', 'even though', 'whereas', 'despite', 'in spite of', 'on the other hand']],
+  ['reason', ['because', 'since', 'for', 'as']],
+  ['result', ['so', 'therefore', 'thus', 'consequently', 'as a result', 'that is why']],
+  ['two actions at the same time, or contrast', ['while']],
+  ['condition (= if … not)', ['unless']],
+  ['choice', ['or', 'whether']],
+  ['every time / every place', ['whenever', 'wherever']],
+  ['time or purpose', ['until', 'till', 'as soon as', 'so as to', 'in order to']]
+];
+function regleConnecteurs(lib, phrases) {
+  const tous = ROLES_CONNECTEURS.flatMap(([, l]) => l).sort((a, b) => b.length - a.length);
+  const nommes = new Set();
+  /* Du plus long au plus court, et chaque locution trouvée est effacée du
+     libellé : « as well as » ne doit pas faire compter « as », ni « even
+     though » faire compter « though ». */
+  let l = String(lib || '').toLowerCase();
+  for (const k of tous) {
+    const r = new RegExp('(^|[^a-z])' + k.replace(/ /g, '\\s+') + '(?![a-z])', 'g');
+    if (r.test(l)) { nommes.add(k); l = l.replace(r, (x, avant) => avant + ' '.repeat(x.length - avant.length)); }
+  }
+  const vus = new Set(nommes);
+  /* « as », « for », « or » ne sont relevés dans le texte que si le libellé les nomme. */
+  const cherches = tous.filter(k => !['as', 'for', 'or'].includes(k) || nommes.has(k));
+  const re = new RegExp('\\b(' + cherches.map(k => k.replace(/ /g, '\\s+')).join('|') + ')\\b', 'gi');
+  for (const ph of phrases || []) {
+    let m; const s = String(ph);
+    while ((m = re.exec(s)) !== null) vus.add(m[1].toLowerCase().replace(/\s+/g, ' '));
+  }
+  if (!vus.size) return '';
+  const parties = ROLES_CONNECTEURS.map(([role, liste]) => {
+    const pris = liste.filter(k => vus.has(k));
+    return pris.length ? role + ': ' + pris.join(', ') : '';
+  }).filter(Boolean);
+  let regle = parties.join(' · ');
+  if ([...vus].some(k => k === 'despite' || k === 'in spite of'))
+    regle += ' — despite / in spite of + noun or -ing; although / even though + subject + verb';
+  return regle;
+}
+
+/* Comparatifs nommés par le libellé ; aucun nommé = les trois. */
+function typesComparaison(lib) {
+  const s = String(lib || '');
+  const t = { sup: /superiority/i.test(s), inf: /inferiority/i.test(s), eq: /equality/i.test(s) };
+  return (t.sup || t.inf || t.eq) ? t : { sup: true, inf: true, eq: true };
+}
+
 const FAMILLES_GRAMMAIRE = [
   {
     nom: 'obligation',
@@ -27258,20 +27378,38 @@ const FAMILLES_GRAMMAIRE = [
     /* Un comparatif se reconnaît à « than », à « as … as », à « more / less /
        fewer + mot » ou à un adjectif en -er suivi de « than » : le simple « -er »
        attrapait « teacher », « after », « her », « water », « number »… */
-    marque: /\b(?:(?:more|less|fewer)\s+(?!than\b)\w{3,}|\w{3,}(?:er|ier)\s+than|\bthan\b|\bas\s+\w+\s+as|(?:the\s+)?(?:better|worse|best|worst|least)|the\s+most\s+\w+|the\s+(?!(?:harvest|forest|interest|request|contest|protest|guest|honest|west|east|rest|test|nest|chest|invest|suggest|arrest|priest|modest|manifest|crest|quest|pest|vest|lest|earnest)\b)\w{3,}est)\b/i,
-    q1: ['Are two things compared, or is one put above all the others?', 'Two things are compared in the first sentence.'],
-    q2: ['What do you find at the end of the short adjective, and what word follows it?', '<b>-er</b>, followed by <i>than</i>.'],
-    regle: 'short adjective + er + than · more + long adjective + than · the + adjective + est = superlative',
-    gabarits: ['A clean compound is healthier than a dirty one.',
-               'This solution is more useful than the other.',
-               'It is the best way to speak about {t}.']
+    marque: /\b(?:(?:more|less|fewer)\s+(?!than\b)\w{3,}|\w{3,}(?:er|ier)\s+than|\bthan\b|\bas\s+\w+\s+as|(?:the\s+)?(?:better|worse|best|worst|least)|the\s+most\s+\w+|\bas\s+\w+-\w+\s+as|the\s+(?!(?:harvest|forest|interest|request|contest|protest|guest|honest|west|east|rest|test|nest|chest|invest|suggest|arrest|priest|modest|manifest|crest|quest|pest|vest|lest|earnest)\b)\w{3,}est)\b/i,
+    q1: ['Look at the words in bold: is one thing above the other, below it, or at the same level?', 'It depends on the sentence: <i>-er / more … than</i> = above (superiority); <i>less … than</i> = below (inferiority); <i>as … as</i> = the same level (equality).'],
+    q2: ['Which small words build each form?', '<i>-er … than</i> (short adjective) or <i>more … than</i> (long adjective); <i>less … than</i>; <i>as … as</i>.'],
+    regle: 'superiority: short adjective + -er + than · more + long adjective + than — inferiority: less + adjective + than (or not as … as) — equality: as + adjective + as — superlative: the + short adjective + -est · the most + long adjective · the least + adjective',
+    regleDe: lib => {
+      const t = typesComparaison(lib), parts = [];
+      if (t.sup) parts.push('superiority: short adjective + -er + than · more + long adjective + than');
+      if (t.inf) parts.push('inferiority: less + adjective + than (or not as … as)');
+      if (t.eq) parts.push('equality: as + adjective + as');
+      if (/superlativ/i.test(lib)) parts.push('superlative: the + short adjective + -est · the most + long adjective · the least + adjective (inferiority)');
+      return parts.join(' — ');
+    },
+    complements: lib => {
+      const t = typesComparaison(lib), L = [];
+      if (t.sup) L.push([/\b[a-z]{3,}(?:er|ier)\s+than\b|\bmore\s+[a-z-]+\s+than\b|\b(?:better|worse)\s+than\b/i, 'A motorbike is faster than a bicycle, and it is more expensive.']);
+      if (t.inf) L.push([/\b(?:less|fewer)\s+[a-z-]+\s+than\b|\bnot\s+(?:as|so)\s+[a-z-]+\s+as\b/i, 'A bicycle is less expensive than a motorbike.']);
+      if (t.eq) L.push([/(?<!not\s)\bas\s+[a-z]+(?:-[a-z]+)?\s+as\b/i, 'In our class, the girls are as hard-working as the boys.']);
+      if (/superlativ/i.test(lib)) L.push(
+        [/\bthe\s+(?:most\s+[a-z-]+|best|worst|(?!(?:forest|harvest|interest|request|rest|west|east|guest|honest|contest|protest|nest|chest|pest|quest|priest|modest|suggest|invest)\b)[a-z]{3,}est)\b/i, 'Ouagadougou is the biggest town of Burkina Faso, and the most crowded.'],
+        [/\bthe\s+least\b/i, 'Walking is the least expensive way to go to school.']);
+      return L;
+    },
+    gabarits: ['A motorbike is faster than a bicycle.',
+               'A bicycle is less expensive than a motorbike.',
+               'In our class, the girls are as hard-working as the boys.']
   },
   {
     nom: 'articles',
     tache: "Copy three sentences of the text, rub out <i>a</i>, <i>an</i> and <i>the</i>, then ask your neighbour to put them back and justify each one.",
     test: /\barticle/i,
     marque: /\b(a|an|the)\b/i,
-    q1: ['Why does the first sentence use <i>a</i> and the second <i>the</i>?', '<i>a</i> introduces something for the first time; <i>the</i> speaks of something already known.'],
+    q1: ['Look at the words in bold: when do we use <i>a</i> or <i>an</i>, and when do we use <i>the</i>?', '<i>a / an</i>: one thing among others, or mentioned for the first time; <i>the</i>: something already known, or the only one.'],
     q2: ['When do we write <i>an</i> instead of <i>a</i>?', 'Before a vowel sound.'],
     regle: 'a / an = one among others, mentioned for the first time · the = the one we already know',
     choix: ['a', 'an', 'the'],
@@ -27435,8 +27573,9 @@ const FAMILLES_GRAMMAIRE = [
     marqueCle: /\b(?:however|moreover|therefore|although|though|whereas|while|unless|despite|in spite of|even though|as well as|yet|still|whenever|wherever|since|whether|nevertheless|furthermore|in addition|on the other hand|as a result|consequently|thus|nor)\b/i,
     marque: /\b(because|so|but|and|yet|still|as well as|although|though|however|therefore|while|whereas|since|unless|as a result|that is why)\b/i,
     q1: ['What does the word in bold join — two ideas, or two words?', 'Two ideas.'],
-    q2: ['Does it add, oppose, or explain?', 'It depends on the word: <i>and</i> adds, <i>but</i> opposes, <i>because</i> explains.'],
-    regle: 'and = adds · but = opposes · because = gives the reason · so = gives the result',
+    q2: ['Does it add an idea, oppose two ideas, give a reason or give a result?', 'It depends on the word: each one is classed in the rule written below.'],
+    regle: 'addition: and, moreover, as well as · contrast: but, yet, however, still, whereas, although / even though + subject + verb, despite / in spite of + noun or -ing · reason: because, since · result: so, therefore, as a result · condition: unless (= if … not)',
+    regleDe: (lib, phrases) => regleConnecteurs(lib, phrases),
     gabarits: ['The pupils swept the yard because the dust made them cough.',
                '{T} is useful, but it needs care.',
                'The rain came late, so the harvest was poor.']
@@ -27586,7 +27725,7 @@ const FAMILLES_GRAMMAIRE = [
     marque: /\b(used to|would often|in those days)\b/i,
     q1: ['Does the sentence speak of now or of a habit that has stopped?', 'Of a habit that has stopped.'],
     q2: ['What follows <i>used to</i>?', 'The base verb.'],
-    regle: 'used to + base verb = a past habit which no longer exists',
+    regle: 'used to + base verb = a past habit or state which no longer exists · would + base verb = an action repeated in the past (not a state)',
     gabarits: ['Children used to walk four kilometres to school.',
                'People used to speak little about {t}.',
                'My grandmother used to tell us stories in the evening.']
@@ -27625,10 +27764,10 @@ const FAMILLES_GRAMMAIRE = [
     nom: 'souhaits et regrets',
     tache: "Choose three difficulties named in the text and write a wish for each one, beginning with <i>I wish</i>.",
     test: /wish|regret/i,
-    marque: /\b(wish|if only|would rather|I hope|should have|could have)\b/i,
+    marque: /\b(wish(?:es|ed)?|if only|would rather|should(?:n[’']t)? have\s+[a-z]+(?:ed|en|wn|ne|t)|could have\s+[a-z]+(?:ed|en|wn|ne|t))\b/i,
     q1: ['Does the speaker tell what is, or what they would like?', 'What they would like: the fact is different.'],
-    q2: ['Which tense follows <i>wish</i>?', 'The simple past, for the present; the past perfect, for the past.'],
-    regle: 'I wish + simple past (a wish about now) · I wish + past perfect (a regret about the past)',
+    q2: ['Which tense follows <i>wish</i> or <i>if only</i>?', 'The simple past for a wish about now; the past perfect for a regret about the past; <i>would</i> for a change wanted from somebody else.'],
+    regle: 'I wish / If only + simple past (a wish about now) · I wish / If only + past perfect (a regret about the past) · I wish + somebody + would (a change wanted from somebody else) · should have + past participle (a regret: the right action was not done)',
     gabarits: ['I wish our school had a library.', 'They wish they had started earlier.', 'We wish every family understood {t}.']
   },
   {
@@ -27762,6 +27901,7 @@ function familleDe(libelle) {
     const f = FAMILLES_GRAMMAIRE.find(x => x.nom === 'verbe + préposition');
     if (f) return f;
   }
+  if (/\b(?:be|get)\s+used\s+to\b/i.test(s)) return FAM_HABITUE;
   if (/adjectival noun/i.test(s)) {
     const f = FAMILLES_GRAMMAIRE.find(x => x.nom === 'noms adjectivaux');
     if (f) return f;
@@ -27774,7 +27914,9 @@ function familleDe(libelle) {
     const f = FAMILLES_GRAMMAIRE.find(x => x.nom === 'comparatifs doubles');
     if (f) return f;
   }
-  if (/superlativ/i.test(s)) {
+  /* v13.44 — « Comparatives and superlatives » relève de la comparaison
+     complète ; seul un libellé qui ne nomme que le superlatif va ici. */
+  if (/superlativ/i.test(s) && !/comparativ/i.test(s)) {
     const f = FAMILLES_GRAMMAIRE.find(x => x.nom === 'superlatifs');
     if (f) return f;
   }
@@ -27846,19 +27988,51 @@ function masquable(phrases, famille) {
    non le premier mot en -s venu. */
 const marqueDe = (phrase, famille) =>
   (famille.marqueCle && famille.marqueCle.test(String(phrase))) ? famille.marqueCle : famille.marque;
+/* v13.44 — La marque se place à la position où l'expression l'a trouvée
+   (m.index) : « phrase.indexOf('a') » tombait dans « Arnaud », « also »,
+   « they »… Pour les mots-outils (articles, déterminants, comparaisons),
+   toutes les occurrences sont marquées : une seule mise en gras laissait
+   croire que les autres articles de la phrase n'étaient pas le point étudié. */
+const MARQUE_PARTOUT = new Set(['articles', 'déterminants', 'démonstratifs', 'quantifieurs',
+  'quantifieurs (some, any, no)', 'comparaison', 'superlatifs', 'noms adjectivaux']);
+function zonesMarque(phrase, famille) {
+  const s = String(phrase), re = marqueDe(s, famille);
+  if (!re) return [];
+  if (!MARQUE_PARTOUT.has(famille.nom)) {
+    const m = s.match(re);
+    return m && m[0] ? [[m.index, m.index + m[0].length]] : [];
+  }
+  const g = new RegExp(re.source, re.flags.replace('g', '') + 'g'), out = [];
+  let m;
+  while ((m = g.exec(s)) !== null) {
+    if (!m[0]) { g.lastIndex++; continue; }
+    const a = m.index, b = m.index + m[0].length, der = out[out.length - 1];
+    if (der && /^\s*$/.test(s.slice(der[1], a))) der[1] = b; else out.push([a, b]);
+  }
+  return out;
+}
+function marquerZones(phrase, zones, rendu) {
+  const s = String(phrase); let out = '', k = 0;
+  for (const [a, b] of zones) { out += esc(s.slice(k, a)) + rendu(s.slice(a, b)); k = b; }
+  return out + esc(s.slice(k));
+}
 function troueMarque(phrase, famille) {
   if (!famille.marque) return esc(phrase);
-  const m = String(phrase).match(marqueDe(phrase, famille));
-  if (!m) return esc(phrase);
-  const i = phrase.indexOf(m[0]);
-  return esc(phrase.slice(0, i)) + '<b>……………</b>' + esc(phrase.slice(i + m[0].length));
+  const z = zonesMarque(phrase, famille);
+  return z.length ? marquerZones(phrase, z, () => '<b>……………</b>') : esc(phrase);
 }
 function soulignerMarque(phrase, famille) {
   if (!famille.marque) return esc(phrase);
-  const m = String(phrase).match(marqueDe(phrase, famille));
-  if (!m) return esc(phrase);
-  const i = phrase.indexOf(m[0]);
-  return esc(phrase.slice(0, i)) + '<b>' + esc(m[0]) + '</b>' + esc(phrase.slice(i + m[0].length));
+  const z = zonesMarque(phrase, famille);
+  return z.length ? marquerZones(phrase, z, x => '<b>' + esc(x) + '</b>') : esc(phrase);
+}
+/* v13.44 — Règle écrite au tableau. Certaines familles la composent à partir
+   du libellé et des phrases réellement montrées : la règle couvre alors tout
+   ce que la classe voit en gras (connecteurs), et rien de plus (comparatifs
+   sans superlatifs en 6e). */
+function regleDe(f, libelle, phrases) {
+  try { if (typeof f.regleDe === 'function') { const r = f.regleDe(String(libelle || ''), phrases || []); if (r) return r; } } catch (e) {}
+  return f.regle;
 }
 
 function conduiteGrammaire(libelle, texte, theme, debutant, infere) {
@@ -27969,9 +28143,22 @@ function conduiteGrammaire(libelle, texte, theme, debutant, infere) {
     lignes.push('Ask: <i>“What is new?”</i> &nbsp;&mdash;&nbsp; <span class="cond-rep">expected: '
       + 'the learners point at the words you have just written.</span>');
   }
+  /* v13.44 — Formes du point que le texte ne montre pas (comparatif
+     d'infériorité, d'égalité, superlatif…) : on les ajoute au tableau, pour
+     que la règle ne décrive pas des formes que la classe n'a jamais vues. */
+  let compl = [];
+  try {
+    if (typeof f.complements === 'function')
+      compl = f.complements(libelle).filter(([re]) => !auTableau.some(s => re.test(sansLocuteur(String(s)))));
+  } catch (e) { compl = []; }
+  if (compl.length) {
+    lignes.push(`The text does not show every form of today’s point. Add ${compl.length === 1 ? 'this sentence' : 'these sentences'} on the board, under the others, and read ${compl.length === 1 ? 'it' : 'them'} aloud:`);
+    lignes.push('<ul class="cond-phr">' + compl.map(([, ph]) => `<li>${soulignerMarque(ph, f)}</li>`).join('') + '</ul>');
+  }
+  const regleTableau = regleDe(f, libelle, [...auTableau, ...reste.slice(0, 5), ...compl.map(x => x[1])].map(x => sansLocuteur(String(x))));
   lignes.push(`Ask: <i>“${auTableau.length === 1 ? f.q1[0].replace(/In the first sentence, /i, 'In this sentence, ') : f.q1[0]}”</i> &nbsp;&mdash;&nbsp; <span class="cond-rep">expected: ${f.q1[1]}</span>`);
   lignes.push(`Underline ${cache ? 'the new words' : 'the words in bold'}${auTableau.length > 1 ? ' in each sentence' : ''}. Ask: <i>“${f.q2[0]}”</i> &nbsp;&mdash;&nbsp; <span class="cond-rep">expected: ${f.q2[1]}</span>`);
-  lignes.push(`Write the rule under the sentences, and leave it on the board: <span class="cond-regle">${esc(f.regle)}</span>`
+  lignes.push(`Write the rule under the sentences, and leave it on the board: <span class="cond-regle">${esc(regleTableau)}</span>`
     + ` <span class="small-note">The learners copy it at the note-taking time, not now.</span>`);
   if (combien > 0) {
     lignes.push(`Ask the learners to find <b>${combien === 1 ? 'one more example' : combien + ' more examples'}</b> of the same point in the text, and to read ${combien === 1 ? 'it' : 'them'} aloud.`);
@@ -28445,18 +28632,18 @@ const DIALOGUES_6E = {
   },
 
   'U1|Classroom language|Giving instructions': {
-    cadre: 'Ali and Fatimata prepare the classroom for the English lesson. They ask each other for help.',
+    cadre: 'Ali and Fatimata prepare the classroom for the English lesson. They tell each other what to do.',
     lignes: [
-      ['Ali', 'Fatimata, can you open the windows, please?'],
-      ['Fatimata', 'Yes, I can. Can you clean the blackboard?'],
-      ['Ali', 'Yes, I can. May I take your duster?'],
-      ['Fatimata', 'Yes, you may. Here you are.'],
-      ['Ali', 'Thank you. Can you put the chairs under the tables?'],
-      ['Fatimata', 'Yes, I can. Can Moussa help us?'],
-      ['Ali', 'Yes, he can. Moussa, come here, please.'],
-      ['Moussa', 'Yes, I am coming.']
+      ['Ali', 'Fatimata, open the windows, please.'],
+      ['Fatimata', 'Sorry? Can you repeat, please?'],
+      ['Ali', 'Open the windows, please.'],
+      ['Fatimata', 'OK. And you, Ali, clean the blackboard. Take my duster.'],
+      ['Ali', 'Thank you. Now put the chairs under the tables.'],
+      ['Fatimata', 'Moussa, come here and help us, please.'],
+      ['Moussa', 'Yes, I am coming.'],
+      ['Ali', 'Thank you, Moussa. Now sit down and open your books.']
     ],
-    exposants: ['Can you', 'Yes, I can', 'May I take', 'Yes, you may', 'Here you are', 'Thank you'],
+    exposants: ['Open the windows, please', 'Can you repeat, please?', 'Clean the blackboard', 'Take my duster', 'Put the chairs under the tables', 'Come here and help us'],
     faits: [
       ['Who opens the windows?', 'Fatimata opens the windows.'],
       ['Who cleans the blackboard?', 'Ali cleans the blackboard.'],
@@ -29967,51 +30154,54 @@ const DIALOGUES_6E = {
     gestes: {}
   },
 
+  /* v13.44 — Leçon sans point de grammaire prescrit : on y révise le présent
+     simple des verbes ordinaires (prescrit en U2), qui est la langue naturelle
+     des repas, et non plus can / must (« What must you eat at lunch? »). */
   'U6|Meals, dishes and cutlery|Breakfast': {
-    cadre: 'It is six o’clock in the morning at the Zongo family. The children take their breakfast before school.',
+    cadre: 'It is six o’clock in the morning at the Zongo family. The children have breakfast before school.',
     lignes: [
-      ['Mrs Zongo', 'Awa, you must eat before you go to school.'],
-      ['Awa', 'Yes, mother. I can take some porridge and bread.'],
-      ['Mrs Zongo', 'Karim must drink his milk too.'],
-      ['Karim', 'I can’t drink it now, mother. I must wash my hands first.'],
-      ['Mrs Zongo', 'You must always wash your hands before the meal.'],
-      ['Awa', 'The breakfast is on the table. We must eat quickly.'],
-      ['Karim', 'Can I take an egg, mother?'],
-      ['Mrs Zongo', 'Yes, you can. But you must leave your plate clean.']
+      ['Mrs Zongo', 'What do you eat for breakfast today, Awa?'],
+      ['Awa', 'I eat porridge and bread, mother. I drink some milk too.'],
+      ['Mrs Zongo', 'And Karim? What does he eat?'],
+      ['Awa', 'He eats an egg and bread. He drinks tea.'],
+      ['Karim', 'I wash my hands before the meal, mother.'],
+      ['Mrs Zongo', 'Good. We always wash our hands before we eat.'],
+      ['Awa', 'Breakfast gives us energy for the morning.'],
+      ['Karim', 'Yes. We leave for school at seven o’clock.']
     ],
-    exposants: ['you must eat before you go to school', 'I can take some porridge', 'Can I take an egg?', 'Yes, you can', 'You must always wash your hands'],
+    exposants: ['What do you eat for breakfast', 'I eat porridge and bread', 'What does he eat?', 'He eats an egg and bread', 'We always wash our hands'],
     faits: [
       ['What time is it?', 'It is six o’clock in the morning.'],
-      ['What can Awa take for breakfast?', 'She can take some porridge and bread.'],
-      ['What must Karim do before the meal?', 'He must wash his hands.'],
-      ['What must they leave clean?', 'They must leave their plate clean.']
+      ['What does Awa eat for breakfast?', 'She eats porridge and bread.'],
+      ['What does Karim drink?', 'He drinks tea.'],
+      ['When do they wash their hands?', 'They wash their hands before the meal.']
     ],
     mots: [
       ['breakfast', 'the first meal of the day, in the morning'],
-      ['meal', 'the food you take at a fixed hour'],
+      ['meal', 'the food you have at a fixed hour'],
       ['egg', 'what a hen lays, white or brown']
     ],
     gestes: {}
   },
 
   'U6|Meals, dishes and cutlery|Lunch': {
-    cadre: 'At noon the pupils speak about the lunch they take at home.',
+    cadre: 'At noon the pupils speak about the lunch they have at home.',
     lignes: [
-      ['Ali', 'What must you eat at lunch, Fatimata?'],
-      ['Fatimata', 'I must eat rice with sauce. And you?'],
-      ['Ali', 'I can eat tô with peanut soup. I must finish my plate.'],
-      ['Fatimata', 'My mother says that we must wash the plates after the lunch.'],
-      ['Ali', 'Can we eat meat every day?'],
-      ['Fatimata', 'No, we can’t. We can eat meat on Sunday.'],
-      ['Ali', 'We must drink water after the meal.'],
-      ['Fatimata', 'And we must say thank you to our mother.']
+      ['Ali', 'What do you eat at lunch, Fatimata?'],
+      ['Fatimata', 'I usually eat rice with sauce. And you?'],
+      ['Ali', 'I eat tô with peanut soup. My mother cooks it every day.'],
+      ['Fatimata', 'Does your family eat meat every day?'],
+      ['Ali', 'No, it doesn’t. We eat meat on Sunday.'],
+      ['Fatimata', 'My brother drinks a lot of water after the meal.'],
+      ['Ali', 'I drink water too, and I say thank you to my mother.'],
+      ['Fatimata', 'And I wash the plates after lunch.']
     ],
-    exposants: ['What must you eat at lunch?', 'I must eat rice with sauce', 'Can we eat meat every day?', 'No, we can’t', 'We must drink water'],
+    exposants: ['What do you eat at lunch', 'I usually eat rice with sauce', 'My mother cooks it every day', 'Does your family eat meat every day?', 'No, it doesn’t'],
     faits: [
-      ['What must Fatimata eat at lunch?', 'She must eat rice with sauce.'],
-      ['What can Ali eat?', 'He can eat tô with peanut soup.'],
-      ['Can they eat meat every day?', 'No, they can’t.'],
-      ['When can they eat meat?', 'They can eat meat on Sunday.']
+      ['What does Fatimata eat at lunch?', 'She usually eats rice with sauce.'],
+      ['What does Ali eat?', 'He eats tô with peanut soup.'],
+      ['Does Ali’s family eat meat every day?', 'No, it doesn’t.'],
+      ['When does Ali’s family eat meat?', 'It eats meat on Sunday.']
     ],
     mots: [
       ['lunch', 'the meal of the middle of the day'],
@@ -30022,23 +30212,23 @@ const DIALOGUES_6E = {
   },
 
   'U6|Meals, dishes and cutlery|Dinner': {
-    cadre: 'In the evening the family takes the dinner together. Awa lays the table.',
+    cadre: 'In the evening the Zongo family has dinner together. Awa lays the table.',
     lignes: [
-      ['Mrs Zongo', 'Awa, you must lay the table for the dinner.'],
-      ['Awa', 'Yes, mother. I must put a plate, a spoon and a glass for each person.'],
-      ['Mrs Zongo', 'We can use a fork and a knife for the meat.'],
-      ['Karim', 'Can I take the big plate, mother?'],
-      ['Mrs Zongo', 'No, you can’t. You must take your own plate.'],
-      ['Awa', 'The glasses are on the table. We must fill them with water.'],
-      ['Mrs Zongo', 'Good. Now everybody must sit down.'],
-      ['Karim', 'We can begin the dinner.']
+      ['Awa', 'I put a plate, a spoon and a glass for each person.'],
+      ['Karim', 'What do we eat tonight, mother?'],
+      ['Mrs Zongo', 'We eat rice and beans. Your father likes rice and beans.'],
+      ['Karim', 'I prefer couscous. And Awa prefers fish.'],
+      ['Awa', 'Yes, I like fish with vegetables.'],
+      ['Mrs Zongo', 'Father uses a fork and a knife for the meat.'],
+      ['Karim', 'Everybody sits down now. We eat together every evening.'],
+      ['Awa', 'I like dinner: father tells stories.']
     ],
-    exposants: ['you must lay the table', 'I must put a plate, a spoon and a glass', 'We can use a fork and a knife', 'Can I take the big plate?', 'No, you can’t'],
+    exposants: ['What do we eat tonight', 'We eat rice and beans', 'Your father likes rice and beans', 'I prefer couscous', 'Awa prefers fish'],
     faits: [
-      ['What must Awa do?', 'She must lay the table for the dinner.'],
-      ['What must she put for each person?', 'She must put a plate, a spoon and a glass.'],
-      ['What can they use for the meat?', 'They can use a fork and a knife.'],
-      ['What must they fill with water?', 'They must fill the glasses with water.']
+      ['What does Awa put for each person?', 'She puts a plate, a spoon and a glass.'],
+      ['What does the family eat tonight?', 'It eats rice and beans.'],
+      ['What does Karim prefer?', 'He prefers couscous.'],
+      ['What does the father use for the meat?', 'He uses a fork and a knife.']
     ],
     mots: [
       ['dinner', 'the meal of the evening'],
@@ -30051,21 +30241,21 @@ const DIALOGUES_6E = {
   'U6|Meals, dishes and cutlery|Cutlery items': {
     cadre: 'Awa writes the list of the cutlery items of her family for the English lesson. Karim reads it with her.',
     lignes: [
-      ['Awa', 'I write: “We must wash the cutlery after each meal.”'],
+      ['Awa', 'I write: “We use a spoon for soup and rice.”'],
       ['Karim', 'Write: “A fork, a knife and a spoon are cutlery items.”'],
-      ['Awa', '“We can cut the meat with a knife.”'],
-      ['Karim', '“We must not play with a knife.”'],
-      ['Awa', '“A plate and a glass are on the table for each person.”'],
-      ['Karim', '“We must put the spoons in the basket.”'],
-      ['Awa', '“Everybody must take his or her own plate.”'],
+      ['Awa', '“My father cuts the meat with a knife.”'],
+      ['Karim', '“My little sister eats with a small spoon.”'],
+      ['Awa', '“Each person has a plate and a glass on the table.”'],
+      ['Karim', '“We wash the cutlery after each meal.”'],
+      ['Awa', '“My mother puts the spoons in the basket.”'],
       ['Karim', 'Good. Now read the list to the class.']
     ],
-    exposants: ['We must wash the cutlery after each meal', 'A fork, a knife and a spoon are cutlery items', 'We can cut the meat with a knife', 'We must not play with a knife', 'We must put the spoons in the basket'],
+    exposants: ['We use a spoon for soup and rice', 'A fork, a knife and a spoon are cutlery items', 'My father cuts the meat with a knife', 'We wash the cutlery after each meal', 'My mother puts the spoons in the basket'],
     faits: [
-      ['When must they wash the cutlery?', 'They must wash it after each meal.'],
+      ['What do they use for soup?', 'They use a spoon.'],
       ['Which are the cutlery items?', 'A fork, a knife and a spoon are cutlery items.'],
-      ['What can they cut with a knife?', 'They can cut the meat.'],
-      ['Where must they put the spoons?', 'They must put them in the basket.']
+      ['Who cuts the meat?', 'Awa’s father cuts the meat with a knife.'],
+      ['When do they wash the cutlery?', 'They wash it after each meal.']
     ],
     mots: [
       ['cutlery', 'the forks, the knives and the spoons you eat with'],
@@ -30432,7 +30622,7 @@ const DIALOGUES_6E = {
     gestes: {}
   },
 
-  'U7|Places and their locations.|Using imperatives places': {
+  'U7|Places and their locations.|Using imperatives (go straight, turn left…)': {
     cadre: 'Mr Traoré gives directions to the class. The pupils find the place on the map.',
     lignes: [
       ['Mr Traoré', 'Go out of the school and turn left.'],
@@ -31242,8 +31432,8 @@ const FAM_SUPERLATIF = {
   test: /superlativ/i,
   marque: /\b(the|its|his|her|our|their|my|your)\s+(most|least|best|worst)\b|\b(the|its|his|her|our|their|my|your)\s+(?!(?:forest|harvest|interest|request|rest|west|guest|honest|contest|protest|conquest|arrest|nest|chest|pest|quest|priest|digest|modest|earnest|suggest|invest|manifest|vest|crest|wrest|zest)\b)\w{3,}est\b/i,
   q1: ['Does the sentence compare two things, or put one above all the others?', 'It puts one above all the others.'],
-  q2: ['What comes before the adjective, and what is added at its end?', '<i>the</i> before it, and <b>-est</b> at its end — or <i>the most</i> for a long adjective.'],
-  regle: 'the + short adjective + est · the most + long adjective · the best / the worst',
+  q2: ['What comes before the adjective, and what is added at its end?', '<i>the</i> before it, and <b>-est</b> at its end — or <i>the most</i> for a long adjective; <i>the least</i> puts it below all the others.'],
+  regle: 'the + short adjective + est · the most + long adjective · the least + adjective (inferiority) · the best / the worst',
   gabarits: ['Football is the most popular sport of the school.',
              'Walking is the cheapest sport of all.',
              'The cleanest classroom receives a prize.']
@@ -31300,7 +31490,7 @@ const FAM_VERBE_PREP = {
   marque: /\b(?:(?:insist|depend|count|rely|decide|agree|concentrate|work|live|keep|base|go|carry)(?:s|es|ed|d|ing)?\s+on|(?:contribute|belong|listen|refer|object|lead|point|talk|turn|stick|amount)(?:s|es|ed|d|ing)?\s+to|(?:complain|talk|think|worry|care|dream|speak|hear|know|learn)(?:s|es|ed|d|ing)?\s+about|(?:pay|paid|wait|prepare|ask|look|apply|thank|blame|search|hope|work|fight|vote)(?:s|es|ed|d|ing)?\s+for|(?:deal|argue|agree|help|provide|cope|compare|share|start|begin|live)(?:s|es|ed|d|ing)?\s+with|(?:succeed|believe|participate|result|specialise|specialize|invest|join)(?:s|es|ed|d|ing)?\s+in|(?:suffer|protect|prevent|benefit|recover|differ|escape|come|learn|die)(?:s|es|ed|d|ing)?\s+from|(?:laugh|look|point|aim|arrive|work|shout|smile)(?:s|es|ed|d|ing)?\s+at|(?:consist|think|approve|accuse|remind|dispose|dream|hear)(?:s|es|ed|d|ing)?\s+of|(?:care|cares|cared|caring)(?:s|es|ed|d|ing)?\s+for)\b|\b(?:(?:afraid|proud|aware|capable|full|short|tired|fond|sure|certain|typical|ashamed|conscious)\s+of|(?:pleased|satisfied|happy|content|busy|familiar|angry|patient|careful)\s+with|(?:willing|married|accustomed|used|similar|opposed|grateful|close|due)\s+to|(?:interested|involved|successful|rich|weak|strong)\s+in|(?:responsible|famous|known|late|ready|sorry|eligible|useful|necessary)\s+for|(?:good|bad|clever|skilful|skillful)\s+at|(?:keen|based|dependent|hard)\s+on|(?:different|absent|safe|free|far|away)\s+from)\b|\blook(?:s|ed|ing)?\s+after\b|\btake(?:s|n)?\s+care\s+of\b|\btook\s+care\s+of\b/i,
   q1: ['Which word comes just after the verb or the adjective?', 'Its own preposition: the verb carries it with it.'],
   q2: ['Can you change that preposition?', 'No: <i>care for</i>, <i>afraid of</i>, <i>pleased with</i>, <i>willing to</i> — each one is learnt as a whole.'],
-  regle: 'care for · be afraid of · be pleased with · be willing to · depend on · be responsible for · look after',
+  regle: 'verb + its preposition: care for · depend on · look after — adjective + its preposition: be afraid of · be pleased with · be responsible for — be willing + to + verb',
   gabarits: ['She cares for her old grandmother every evening.',
              'The pupils are pleased with their results.',
              'Many families depend on the rain for their food.']
@@ -31447,6 +31637,20 @@ const FAM_QUESTIONS_INDIRECTES = {
   gabarits: ['The teacher asked whether the pupils had understood.',
              'He wanted to know where the meeting would take place.',
              'She asked me why I was late.']
+};
+/* v13.44 — « Get used to / Be used to » partait dans « used to + base verb »
+   (habitude passée) : la règle écrite au tableau était fausse. */
+const FAM_HABITUE = {
+  nom: 'be used to / get used to',
+  tache: "Find in the text three situations people must adapt to, and write a sentence for each one with <i>be used to</i> or <i>get used to</i> + noun or -ing.",
+  test: /\b(?:be|get)\s+used\s+to\b/i,
+  marque: /\b(?:am|is|are|was|were|be|been|being|get|gets|got|getting|become|becomes|became)\s+(?:not\s+)?used\s+to\b/i,
+  q1: ['Does the sentence speak of a past habit, or of being accustomed to something?', 'Of being accustomed to something (or of becoming accustomed to it).'],
+  q2: ['What follows <i>used to</i> here: a base verb, or a noun / an -ing form?', 'A noun or an -ing form: <i>to</i> is a preposition here.'],
+  regle: 'be used to + noun or -ing = be accustomed to (a state) · get used to + noun or -ing = become accustomed to (a change) · ≠ used to + base verb = a past habit',
+  gabarits: ['Newcomers in Ouagadougou soon get used to the traffic.',
+             'I am used to getting up early for school.',
+             'She is not used to speaking in public yet.']
 };
 FAMILLES_GRAMMAIRE.push(FAM_PERCEPTION, FAM_ADV_RELATIFS, FAM_DO_MAKE, FAM_ETRE, FAM_AVOIR, FAM_SUCCESSION, FAM_SUPERLATIF, FAM_DOUBLE_COMP, FAM_REFLECHIS, FAM_CONJ_TEMPS, FAM_VERBE_PREP, FAM_INF_PASSIF, FAM_NEED_DARE, FAM_INF_SANS_TO, FAM_ING, FAM_ORDRE_ADJ, FAM_DISCOURS_ORDRES);
 FAMILLES_GRAMMAIRE.unshift(FAM_QUESTIONS_INDIRECTES);
@@ -31903,7 +32107,7 @@ const TEXTES_5E = {
     "Ali advises his younger brother before the first day of school. Do leave the house ten minutes earlier.",
     "Don't take the short cut through the market. Do walk on the left side of the road. Don't listen to music with both ears. Do cross at the crossing near the dispensary. Don't accept a ride from a person you do not know. Do tell me if a driver frightens you."
   ],
-  'U5|Risky places in the traffic|Using imperatives Do slow down near schools': [
+  'U5|Risky places in the traffic|Using imperatives (do / don’t)': [
     "Awa writes the signs for the road near her school. Do slow down near schools.",
     "Don't park in front of the gate. Do stop when the children cross. Don't use the horn near the classrooms. Do respect the agent at the exit. Don't overtake in this street. Do leave the way free for the ambulance. She draws each sign on a sheet, and the class puts them on the wall of the school."
   ],
@@ -31950,7 +32154,7 @@ const TEXTES_5E = {
     "Each worker has a rank, and the name of the rank often comes from the work itself. The construction labourer carries the material. The tile layer places the tiles. The courier office boy brings the documents.",
     "The foreman supervises the team and works closely with the architect. A good organisation is the first condition of a good construction. The management of a site is a question of information: when the information is clear, the realisation is faster and the protection of everybody is better."
   ],
-  'U6|On the construction site|Using formation of nouns derived': [
+  'U6|On the construction site|Using formation of nouns derived from verbs': [
     "Many nouns of the building trade are made from a verb and an ending. The verb to build gives the noun builder, and to paint gives painter. The verb to inspect gives inspector, and to manage gives manager.",
     "Other nouns are made from an adjective: safe gives safety, useful gives usefulness and able gives ability. The construction of a house needs the preparation of the ground, the installation of the water and the protection of the workers. When you know the ending, you often guess the meaning of a new word without opening a dictionary."
   ],
@@ -33706,9 +33910,9 @@ const MINI_PAR_FAMILLE = {
   'voix passive': { ex: ['The yard is swept every morning.', 'The window was broken by a boy.'],
     faute: '« The yard swept » (be forgotten) and a wrong participle (« was breaked »).',
     remede: 'Build it in two boxes: the verb be (right tense) + the past participle. The agent comes last, with by.' },
-  'comparaison': { ex: ['Ali is taller than Moussa.', 'This book is more expensive than that one.'],
+  'comparaison': { ex: ['Ali is taller than Moussa.', 'This book is more expensive than that one.', 'A bicycle is less expensive than a motorbike.', 'Awa is as tall as Fatou.'],
     faute: '« more tall », « Ali is taller that Moussa » and « as tall than ».',
-    remede: 'Short adjective: -er + than. Long adjective: more + adjective + than. Equality: as … as.' },
+    remede: 'Superiority: -er + than (short adjective), more + adjective + than (long adjective). Inferiority: less + adjective + than. Equality: as … as. Superlative: the -est, the most, the least.' },
   'articles': { ex: ['I have a book. The book is red.', 'My uncle is an engineer.'],
     faute: '« He is engineer » (article omitted before a job) and « a » before a vowel sound (« a orange »).',
     remede: 'A / an for the first mention or a job, the for what is already known. An before a vowel sound.' },
@@ -33799,9 +34003,12 @@ const MINI_PAR_FAMILLE = {
   'structures négatives': { ex: ['I don’t know the answer.', 'Nobody came to the meeting.'],
     faute: '« I know not », « Nobody didn’t come » (double negation).',
     remede: 'Auxiliary + not + bare verb. With never, nobody, nothing, no second not.' },
-  'souhaits et regrets': { ex: ['I wish I had a bicycle.', 'I wish I had studied harder.'],
-    faute: '« I wish I will have » and the present used for a regret about the past.',
-    remede: 'Wish + simple past for the present, wish + past perfect for the past.' },
+  'be used to / get used to': { ex: ['I am used to getting up early.', 'She soon got used to the noise of the town.'],
+    faute: '« I am used to get up early » (base verb after to) and confusion with « I used to get up early ».',
+    remede: 'Here to is a preposition: a noun or an -ing form follows it. Compare on the board: I used to walk (a past habit) / I am used to walking (I am accustomed to it).' },
+  'souhaits et regrets': { ex: ['I wish I had a bicycle.', 'I wish I had studied harder.', 'I wish you would listen.', 'You should have told me.'],
+    faute: '« I wish I will have », the present used for a regret about the past, and « should of » / « should had ».',
+    remede: 'Wish + simple past for the present, wish + past perfect for the past, wish + would for a change wanted from somebody else; should have + past participle for a regret about what was not done.' },
   'noms adjectivaux': { ex: ['The young are the future of the country.', 'The poor need help.'],
     faute: '« The youngs » and a singular verb after the group.',
     remede: 'The + adjective = a group of people: no s, plural verb.' },
@@ -33819,7 +34026,7 @@ const MINI_PAR_FAMILLE = {
     remede: 'Give the chain first – then – next – after that – finally, and have the class retell a recipe with it.' },
   'superlatifs': { ex: ['Ali is the tallest boy in the class.', 'This is the most interesting book.'],
     faute: '« the most tall » and « the tallest of the class » (in the class).',
-    remede: 'Short adjective: the -est. Long adjective: the most. Then in + the group.' },
+    remede: 'Short adjective: the -est. Long adjective: the most. Below all the others: the least. Then in + the group.' },
   'comparatifs doubles': { ex: ['The cleaner the house is, the healthier we are.', 'It gets hotter and hotter.'],
     faute: '« the more clean, the more healthy » and the second the forgotten.',
     remede: 'Two the, two comparatives, a comma in the middle.' },
@@ -33867,7 +34074,7 @@ function blocGrammaireFamille(label) {
   return `
     <h3>Grammar point — ${esc(pointDeLangue(label))}</h3>
     <table class="grid"><tbody>
-      <tr><td style="width:22%"><b>Règle</b></td><td>${esc(f.regle)}</td></tr>
+      <tr><td style="width:22%"><b>Règle</b></td><td>${esc(regleDe(f, pointDeLangue(label), []))}</td></tr>
       <tr><td><b>Exemples</b></td><td>${m.ex.map(x => esc(x)).join('<br>')}</td></tr>
       <tr><td><b>La faute à attendre</b></td><td>${esc(m.faute)}</td></tr>
       <tr><td><b>Ce qu'il faut faire</b></td><td>${esc(m.remede)}</td></tr>
@@ -34557,6 +34764,16 @@ function openPlanSure(id) {
   /* Une coquille de la planification (« FMGs ») a été corrigée : on la corrige aussi dans les fiches déjà enregistrées. */
   if (p.lesson) p.lesson = String(p.lesson).replace(/FMGs/g, 'FGMs');
   if (p.session) p.session = String(p.session).replace(/FMGs/g, 'FGMs');
+  /* v13.44 — Séances dont l'intitulé tronqué a été rétabli. */
+  const SEANCES_RENOMMEES = {
+    'Using imperatives places': 'Using imperatives (go straight, turn left…)',
+    'Using imperatives Do slow down near schools': 'Using imperatives (do / don’t)',
+    'Using formation of nouns derived': 'Using formation of nouns derived from verbs',
+    'Using determiners Own (e.g': 'Using determiners (own, each)',
+    'Talking about training and job opportunities Sensitising': 'Talking about training and job opportunities',
+    'Sensitising Giving opinions': 'Sensitising and giving opinions'
+  };
+  if (p.session && SEANCES_RENOMMEES[p.session]) p.session = SEANCES_RENOMMEES[p.session];
   $('sessionType').value = p.type; buildSkills();
   $('classLevel').value = p.c; buildUnits();
   if (p.unitId) { choisirUnite(p.unitId); buildLessons(); }
