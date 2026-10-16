@@ -2,7 +2,7 @@
    Stratégie : réseau d'abord pour la page (pour que les mises à jour arrivent),
    cache en secours (pour que l'application marche sans connexion).
    Les icônes et le manifeste sont servis depuis le cache. */
-const CACHE = 'bee-13.37';
+const CACHE = 'bee-13.45';
 const RESSOURCES = [
   './',
   './index.html',

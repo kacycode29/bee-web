@@ -42,15 +42,15 @@ const ok = (nom, cond, detail) => { resultats.push({ nom, ok: !!cond, detail });
   ({ ctx, page } = await nouveau(stockage({ token: jeton({ permanent: true, installation_id: 'android-AUTRE', license_key: 'BEE-TEST' }), license_key: 'BEE-TEST' })));
   e = await etat(page);
   ok('autre appareil : licence conservée', !!e.stocke, JSON.stringify(e));
-  ok('autre appareil : message en français sur le nouvel identifiant', /identifiant de cet appareil a changé/i.test(e.statut) && /nouvel identifiant/i.test(e.statut), e.statut);
+  ok('autre appareil : message clair sur le nouvel identifiant', /ID of this device has changed/i.test(e.statut) && /new ID/i.test(e.statut), e.statut);
   ok('autre appareil : la porte reste fermée', e.porteOuverte, '');
   await ctx.close();
 
-  /* 3. Code illisible / erreur passagère : licence conservée, « Vérification impossible, réessayez » */
+  /* 3. Code illisible / erreur passagère : licence conservée, « The check could not be completed; please try again » */
   ({ ctx, page } = await nouveau(stockage({ token: 'abc.def', license_key: 'BEE-TEST' })));
   e = await etat(page);
   ok('code illisible : licence conservée', !!e.stocke, JSON.stringify(e));
-  ok('code illisible : « Vérification impossible, réessayez »', /Vérification impossible, réessayez/.test(e.statut), e.statut);
+  ok('code illisible : « The check could not be completed; please try again »', /could not be completed; please try again/.test(e.statut), e.statut);
   ok('code illisible : bouton « Réessayer » visible', e.reessayer, '');
   await ctx.close();
 
@@ -58,14 +58,14 @@ const ok = (nom, cond, detail) => { resultats.push({ nom, ok: !!cond, detail });
   ({ ctx, page } = await nouveau({ 'bee.license.offline.v2': '{pas du json' }));
   e = await etat(page);
   ok('donnée abîmée : licence conservée', e.stocke === '{pas du json', JSON.stringify(e));
-  ok('donnée abîmée : message de nouvel essai', /Vérification impossible, réessayez/.test(e.statut), e.statut);
+  ok('donnée abîmée : message de nouvel essai', /could not be completed; please try again/.test(e.statut), e.statut);
   await ctx.close();
 
   /* 5. Signature réellement invalide : seule situation où la licence est retirée */
   ({ ctx, page } = await nouveau(stockage({ token: jeton({ permanent: true, installation_id: idAppareil, license_key: 'BEE-TEST' }), license_key: 'BEE-TEST' })));
   e = await etat(page);
   ok('signature invalide : licence retirée', !e.stocke, JSON.stringify(e));
-  ok('signature invalide : message en français', /n’est pas authentique/.test(e.statut), e.statut);
+  ok('signature invalide : message clair', /not genuine/.test(e.statut), e.statut);
   await ctx.close();
 
   /* 6. Licence valide (vérification simulée) : échec passager, puis « Réessayer » ouvre la porte */
@@ -80,7 +80,7 @@ const ok = (nom, cond, detail) => { resultats.push({ nom, ok: !!cond, detail });
   }, stockeAvant);
   const panne = await etat(page);
   ok('navigateur sans vérification : licence conservée', !!panne.stocke, JSON.stringify(panne));
-  ok('navigateur sans vérification : « Vérification impossible, réessayez »', /Vérification impossible, réessayez/.test(panne.statut) && panne.reessayer, panne.statut);
+  ok('navigateur sans vérification : « The check could not be completed; please try again »', /could not be completed; please try again/.test(panne.statut) && panne.reessayer, panne.statut);
   await page.evaluate(() => { window.__panne = false; });
   await page.click('#beeRetryBtn');
   await page.waitForTimeout(400);
@@ -90,7 +90,7 @@ const ok = (nom, cond, detail) => { resultats.push({ nom, ok: !!cond, detail });
 
   /* 7. Menus : une situation d'intégration par unité (post-primaire) ou par groupe de deux unités (secondaire) */
   ({ ctx, page } = await nouveau());
-  await page.evaluate(() => { document.getElementById('beeLicenseGate').hidden = true; });
+  await page.evaluate(() => { document.getElementById('beeLicenseGate').hidden = true; BEE_ACTIVE = true; /* simule une licence vérifiée (13.38 : sans elle, aucune fiche n'est générée) */ });
   const menus = await page.evaluate(() => {
     const sortie = {};
     for (const c of Object.keys(CURRICULUM)) {
@@ -138,7 +138,7 @@ const ok = (nom, cond, detail) => { resultats.push({ nom, ok: !!cond, detail });
     const lib = library();
     const e = lib[0];
     renderProgression();
-    const ligne = [...document.querySelectorAll('#progression tr.done')].map(tr => tr.textContent.trim().replace(/\s+/g, ' ')).filter(t => /Problem-solving/.test(t));
+    const ligne = [...document.querySelectorAll('#progression tr.done')].map(tr => tr.textContent.trim().replace(/\s+/g, ' ')).filter(t => /Problem-solving|Résolution de problème/.test(t));
     openPlan(e.id);
     return { titre: document.getElementById('stageTitle').textContent, coche: ligne.length, unite: document.getElementById('unitSelect').value };
   });

@@ -35,7 +35,8 @@ const AN_SONORE_VOYELLE = /^(hour|honest|honou?r|heir|x-ray|[fhlmnrsx]{2,}$|[A-Z
 function controleArticles(texte, nom, sortie) {
   texte.replace(/\s+/g, ' ').split(/(?<=[.!?”"])\s+/).forEach(phrase => {
     if (MOTS_FR.test(phrase)) return;                 /* phrase en français : « a » est alors le verbe avoir */
-    for (const m of phrase.matchAll(/(?<![-–·\d])\b(a|an)\s+([a-z][A-Za-z'’-]*)/g)) {
+    /* « by / a / only » : mots mélangés d'un exercice de remise en ordre, pas un article suivi de son nom */
+    for (const m of phrase.matchAll(/(?<![-–·\d])(?<!\/ )\b(a|an)\s+(?!\/)([a-z][A-Za-z'’-]*)/g)) {
       const art = m[1], mot = m[2];
       if (/^(and|or|introduces|correctly|before|with|is|are|for|then|but|the|in|to|of)$/.test(mot)) continue;   /* « a » et « an » cités comme mots dans une règle de grammaire */
       if (art === 'a' && /^[AEIOUaeiou]/.test(mot) && !A_SONORE_CONSONNE.test(mot) && !/^[A-Z]{2,}/.test(mot)) sortie.add(`${nom}: « a ${mot} »`);
@@ -64,7 +65,10 @@ const PERSONNAGES = [/The president of the court/, /A young man who/, /young man
   /A man arrives/, /the pupil .* knocked down/, /He reminded the class/, /a friend of his\/mine/, /He teacher/, /egg incubators/, /Amza/, /somebody asked who had encouraged him/i,
   /Nobody had ever let him/, /Somebody asked who had encouraged him/, /has got to (find|pay)|ought to keep a notebook|His prices are to be fixed|has got to answer/,
   /He had completed his studies in agriculture/, /looking for someone who could tell him the truth/, /I heard him explain/, /He succeeded to create his business/,
-  /He explains that in one season/, /what is reproached to him/, /“He (encouraged|said)/];
+  /He explains that in one season/, /what is reproached to him/, /“He (encouraged|said)/,
+  /* 13.38 — cas relus à la main : exemples de fautes d'élèves, phrases d'exemple, récit sur un fermier précis, phrase coupée en liste de mots */
+  /La faute à attendre/, /He was seen to leave the room/, /« he » for a girl/, /So he is/,
+  /He is a farmer|His neighbour is a trader|His two brothers are workers|His wife is a seller/, /The agent said that he/, /\/ him \/ or \/|\/ his \/ or \//];
 function heGeneriques(texte, nom, sortie) {
   const re = /\b(he|his|him|himself)\b/gi; let m;
   while ((m = re.exec(texte))) {
@@ -147,8 +151,8 @@ for (const c of Object.keys(d.rythme)) {
     const avant = r.ordre[iP - 1] || '';
     if (!/^[LC]:/.test(avant) || avant.slice(2) !== dernier) rythme.push(`${c}: la situation des unités ${g.join('+')} ne suit pas l'unité ${dernier} (${avant})`);
   });
-  if (!postPrimaire.includes(c) && !/group of two units/.test(r.note)) rythme.push(`${c}: l'écran Progression ne dit pas « un groupe de deux unités »`);
-  if (postPrimaire.includes(c) && !/end of each unit/.test(r.note)) rythme.push(`${c}: l'écran Progression ne dit pas « à la fin de chaque unité »`);
+  if (!postPrimaire.includes(c) && !/group of two units|groupe de deux unités/.test(r.note)) rythme.push(`${c}: l'écran Progression ne dit pas « un groupe de deux unités »`);
+  if (postPrimaire.includes(c) && !/end of each unit|fin de chaque unité/.test(r.note)) rythme.push(`${c}: l'écran Progression ne dit pas « à la fin de chaque unité »`);
 }
 for (const f of resolution) {
   const attendu = postPrimaire.includes(f.c) ? [f.uid] : d.rythme[f.c].groupes.find(g => g[0] === f.uid);

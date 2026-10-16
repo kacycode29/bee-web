@@ -22,7 +22,7 @@ const sortie = path.resolve(process.argv[3] || 'fiches-generees.json');
   await page.waitForTimeout(500);
   const resultat = await page.evaluate(() => {
     const fiches = [], erreurs = [];
-    document.getElementById('beeLicenseGate').hidden = true;
+    document.getElementById('beeLicenseGate').hidden = true; BEE_ACTIVE = true; /* simule une licence vérifiée (13.38 : sans elle, aucune fiche n'est générée) */
     const classes = Object.keys(CURRICULUM);
     const types = ['Learning Session', 'Consolidation Session', 'Problem-Solving Session'];
     const lancer = (meta, regler) => {
