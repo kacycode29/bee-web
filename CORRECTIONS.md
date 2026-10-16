@@ -32,7 +32,7 @@ Android simulé : pas d'astuce, écran d'activation normal.
 ## À tester sur un iPhone déjà installé
 
 1. Ouvrir BEE depuis son icône, avec la connexion ; le fermer puis le rouvrir une fois.
-2. En haut de la page, la version doit être **13.44**, et la licence doit rester active.
+2. En haut de la page, la version doit être **13.45**, et la licence doit rester active.
 3. Couper la connexion et rouvrir BEE : il doit s'ouvrir quand même.
 
 ## 13.42
@@ -51,3 +51,9 @@ Retours d'inspection sur la 13.43 : coupe « Arn……ud » et mises en gras cor
 connecteurs composée d'après le texte, *wishes and regrets* et *be / get used to* corrigés, intitulés tronqués rétablis,
 6e U6 L1 au présent simple, fonctions et objectifs par séance nettoyés (6e à 3e). Détail : section 31 du rapport de
 `bee-fiches`. Cache hors connexion `bee-13.44`. La page est la même que celle de l'APK, plus les ajouts propres au web.
+
+## 13.45
+
+Second retour sur la 13.44 : ponctuation et points de suspension des intitulés de grammaire unifiés, points soudés
+séparés (4e U2 L2 répartie entre ses deux séances), séance 4e U6 renommée, règle des causatifs complétée. Détail :
+section 32 du rapport de `bee-fiches`. Cache hors connexion `bee-13.45`.
