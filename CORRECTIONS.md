@@ -1,3 +1,19 @@
+# BEE Web — version 13.46
+
+Cette version reprend la page 13.46 de BEE-fiches, comme l'APK et le `.exe` 13.46 ; le détail est dans
+`CORRECTIONS.md` du dépôt `bee-fiches` (conduite propre au listening, au speaking et au writing ; échanges et
+textes modèles du post-primaire ; Input stage 5 / 4 / 6 ; corrections de pronoms et d'objectifs).
+
+- **`index.html`** : la page 13.46 de BEE-fiches, avec les trois mêmes ajouts propres au web qu'en 13.45, aux mêmes
+  endroits (en-tête pour l'écran d'accueil, style de l'astuce iPhone, fonctionnement hors connexion et astuce).
+  Vérifié : la différence avec la page Android est exactement celle de la 13.45.
+- **`sw.js`** : cache hors connexion `bee-13.46`, pour que les téléphones déjà installés passent à la nouvelle version.
+- **`tests/`** : contrôles de la conduite par compétence ajoutés.
+
+Vérification : 674 fiches générées sans erreur, **21 contrôles sur 21** et **32 essais sur 32** réussis.
+
+---
+
 # BEE Web — version 13.41 (branche `correction-grammaire-vocabulaire`)
 
 Cette version reprend la page 13.41 de BEE-fiches (branche `correction-grammaire-vocabulaire`), comme l'APK et le `.exe` 13.41.

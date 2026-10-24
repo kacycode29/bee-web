@@ -68,7 +68,11 @@ const PERSONNAGES = [/The president of the court/, /A young man who/, /young man
   /He explains that in one season/, /what is reproached to him/, /“He (encouraged|said)/,
   /* 13.38 — cas relus à la main : exemples de fautes d'élèves, phrases d'exemple, récit sur un fermier précis, phrase coupée en liste de mots */
   /La faute à attendre/, /He was seen to leave the room/, /« he » for a girl/, /So he is/,
-  /He is a farmer|His neighbour is a trader|His two brothers are workers|His wife is a seller/, /The agent said that he/, /\/ him \/ or \/|\/ his \/ or \//];
+  /He is a farmer|His neighbour is a trader|His two brothers are workers|His wife is a seller/, /The agent said that he/, /\/ him \/ or \/|\/ his \/ or \//,
+  /* 13.46 — personnages nommés : Yacouba, l'enseignant de 6e qui dit « Sit down », Nkrumah, le cousin et le voisin d'Awa */
+  /Yacouba/, /he could put a number on it/, /'Sit down,' he says/, /opened the same road before him/, /Awa's cousin is a carpenter; he/, /Awa's neighbour lost his leg/,
+  /* 13.46 — post-primaire : l'oncle et son exploitation (texte modèle de 5e), le frère d'Ali (dialogue de 4e) */
+  /my uncle is a farmer|He is also a breeder|his two sons are workers|his wife is a seller/, /My brother keeps his own secrets/];
 function heGeneriques(texte, nom, sortie) {
   const re = /\b(he|his|him|himself)\b/gi; let m;
   while ((m = re.exec(texte))) {
@@ -170,6 +174,9 @@ for (const f of apprentissage) {
   const dv = f.devoir || '';
   if (!dv) devoirsLourds.push(`${nomFiche(f)}: pas de devoir`);
   else if (/Expected length|paragraph|essay|composition|\b\d+\s*(to\s*\d+\s*)?(words|sentences)\b|about \d+ words/i.test(dv)) devoirsLourds.push(`${nomFiche(f)}: ${dv.slice(0, 90)}`);
+  /* 13.46 — speaking et writing du secondaire : le devoir est une prise de notes (un titre et des tirets),
+     ou une phrase simple suivie de notes ; c'est plus léger encore que deux ou trois phrases. */
+  else if (secondaire.includes(f.c) && /^(Speaking|Writing)$/.test(f.skill) && /\bin notes\b/i.test(dv) && !/full sentences;? (?!be)/i.test(dv.replace('Do not write full sentences', ''))) continue;
   else if (f.skill !== 'Translation' && f.c !== '6e' && !/two or three simple sentences|three simple sentences|two simple sentences|a simple sentence for each|simple sentences/i.test(dv)) devoirsLourds.push(`${nomFiche(f)}: ${dv.slice(0, 90)}`);
 }
 controle('Devoirs des séances d\'apprentissage allégés (quelques phrases simples, sans longueur imposée)', devoirsLourds);
@@ -185,6 +192,39 @@ for (const f of apprentissage) {
   if (/Situation d'int/.test(f.texte)) production.push(nomFiche(f) + ': situation d\'intégration dans une séance d\'apprentissage');
 }
 controle('Aucune rédaction de paragraphe ni production dans les séances d\'apprentissage', production);
+
+/* 8 bis (13.46). Conduite propre à la compétence : un listening ne se lit pas ; speaking et writing
+   du secondaire présentent leurs stratégies (5 / 4 / 6 minutes à l'Input stage). */
+const conduite = [];
+for (const f of apprentissage) {
+  const iIn = f.texte.indexOf('II) Input stage'), iFin = f.texte.indexOf('COPYING AND EXECUTING');
+  const deroule = iIn >= 0 && iFin > iIn ? f.texte.slice(iIn, iFin) : '';
+  if (f.skill === 'Listening Comprehension' && !(f.c === '6e' && /dialogue/i.test(f.texte.slice(0, 4000)))) {
+    if (!deroule) { conduite.push(nomFiche(f) + ': déroulé introuvable'); continue; }
+    const lecture = deroule.match(/read it silently|Hand out or write the text|Read the text again|Find in the text|evidence from the text|Before showing the text/);
+    if (lecture) conduite.push(`${nomFiche(f)}: listening conduit comme une lecture (« ${lecture[0]} »)`);
+    if (!/never given to the learners/.test(f.texte)) conduite.push(`${nomFiche(f)}: le script n'est pas réservé au professeur`);
+    if (!/may adapt the text/.test(f.texte)) conduite.push(`${nomFiche(f)}: pas de mention de l'adaptation possible du script`);
+  }
+  if (secondaire.includes(f.c) && (f.skill === 'Speaking' || f.skill === 'Writing')) {
+    if (!/Step 1 — Vocabulary \(5 min\)[\s\S]*Step 2 — Grammar \(4 min\)[\s\S]*Step 3 — [^\n]*\(6 min\)/.test(deroule)) conduite.push(`${nomFiche(f)}: partage 5 / 4 / 6 absent`);
+    const attendu = f.skill === 'Speaking' ? /introductory sentence[\s\S]*notes/ : /topic sentence/;
+    if (!attendu.test(deroule)) conduite.push(`${nomFiche(f)}: stratégie de la compétence absente`);
+    if (/Teacher: Read the text and tell the main idea/.test(deroule)) conduite.push(`${nomFiche(f)}: question directrice de lecture`);
+  }
+}
+/* Post-primaire (5e, 4e, 3e) : un échange modèle réel en speaking, un texte modèle en writing. */
+for (const f of apprentissage) {
+  if (!['5e', '4e', '3e'].includes(f.c) || !/^(Speaking|Writing)$/.test(f.skill)) continue;
+  const iIn = f.texte.indexOf('II) Input stage'), iFin = f.texte.indexOf('COPYING AND EXECUTING');
+  const deroule = iIn >= 0 && iFin > iIn ? f.texte.slice(iIn, iFin) : '';
+  if (!/Step 1 — Vocabulary \(5 min\)[\s\S]*Step 2 — Grammar \(4 min\)[\s\S]*Step 3 — [^\n]*\(6 min\)/.test(deroule)) conduite.push(`${nomFiche(f)}: partage 5 / 4 / 6 absent`);
+  if (f.skill === 'Speaking' && !/Model exchange — performed by the teacher/.test(f.texte)) conduite.push(`${nomFiche(f)}: pas d'échange modèle`);
+  if (f.skill === 'Speaking' && !/Expressions to interact/.test(deroule)) conduite.push(`${nomFiche(f)}: expressions pour interagir absentes`);
+  if (f.skill === 'Writing' && !/Model text — to be analysed before writing/.test(f.texte)) conduite.push(`${nomFiche(f)}: pas de texte modèle`);
+  if (f.skill === 'Writing' && !/topic sentence/.test(deroule)) conduite.push(`${nomFiche(f)}: topic sentence absente`);
+}
+controle('Conduite propre au listening, au speaking et au writing (13.46)', conduite);
 
 /* 9. Coquilles recopiées de la planification */
 const coquilles = [];
